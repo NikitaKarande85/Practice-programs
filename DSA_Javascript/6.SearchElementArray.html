@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Element</title>
+    <script>
+        let arr=[4,56,7,2,8,9,7,1]
+        const searchValue=7;
+        let checkvalue=false;
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]==searchValue){
+                console.log(`yes your value is available:${arr[i]} and that index is ${i}`);
+                checkvalue=true;
+                break;
+            }
+        }
+        if(checkvalue==false){
+            console.log("Your value is not in array")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

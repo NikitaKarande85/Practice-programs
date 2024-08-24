@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete element of array</title>
+    <script>
+        let arr=[3,6,9,3,4];
+        const position=2;
+
+        for(i=position;i<arr.length;i++){
+            arr[i]=arr[i+1];
+        }
+        arr.length=arr.length-1;
+        console.log('arr',arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

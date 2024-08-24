@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Element Value</title>
+    <script>
+        function GetValue(){
+            const copy=document.getElementById('name').value;
+        
+            if(copy){
+                alert(copy);
+            }else{
+                alert("Please enter value");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Access element Value</h1>
+    <label>Enter your name:</label>
+    <input type="text" id="name" />
+    <button onclick="GetValue()">Submit</button>
+</body>
+</html>
