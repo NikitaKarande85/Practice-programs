@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head and tail recursion</title>
+    <script>
+        function HeadAndTailRecursion(a){
+            console.log("Head recursion",a)
+            if(a<10){
+                HeadAndTailRecursion(a+1)
+                
+            }
+            console.log("------------------------------------------")
+            console.log("Tail recursion",a)
+        }
+        HeadAndTailRecursion(1)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
