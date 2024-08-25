@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse string with stack</title>
+    <script>
+        let stack=[];
+        let currentSize=stack.length;
+
+        function ReverseStringWithStack(str){
+           for(i=0;i<str.length;i++){
+            stack[currentSize]=str[i]
+            currentSize=currentSize+1;
+           }
+           //str reverse
+           for(i=0;i<str.length;i++){
+            str[i]=stack[currentSize-1]
+            currentSize=currentSize-1;
+           }
+        }
+
+        let name="Nikita";
+        console.log("name",name);
+        let str=name.split("");
+        console.log("str",str);
+        ReverseStringWithStack(str);
+        console.log("stack",stack)
+        console.log("reverse str",str)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
