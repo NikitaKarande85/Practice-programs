@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue with stack</title>
+    <script>
+        class queue{
+            item=[];
+            currentSize;
+            maxSize;
+            i;
+
+            constructor(size){
+                this.currentSize=this.item.length;
+                this.maxSize=size;
+                this.i=0;
+            }
+            enqueue(value){
+                if(this.currentSize!=this.maxSize){
+                    this.item[this.currentSize]=value;
+                    this.currentSize++;
+                }
+            }
+            dequeue(){
+                for(this.i=0;this.i<this.item.length;this.i++){
+                    this.item[this.i]=this.item[this.i+1];
+                }
+                this.currentSize=this.currentSize-1;
+                this.item.length=this.currentSize;
+            }
+            display(){
+                console.log("item:",this.item);
+            }
+        }
+        const obj=new queue(4);
+        obj.enqueue(10);
+        obj.enqueue(50);
+        obj.enqueue(60);
+        obj.enqueue(60);
+        obj.dequeue()
+        obj.display();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

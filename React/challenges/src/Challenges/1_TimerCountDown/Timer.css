@@ -1,0 +1,60 @@
+.bodystyle{
+   background-color: antiquewhite;
+   height: 100vh;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+}
+.bodystyle .inputContainer > input{
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    border: none !important;
+    margin: 10px;
+}
+.bodystyle .inputContainer > input:focus{
+    outline: none;
+}
+.inputContainer{
+    display: flex;
+}
+.startButton{
+    height: 15%;
+    width: 20%;
+    border: none !important;
+    font-size: 25px;
+    color: blue;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.displayTime{
+    display: flex;
+}
+.displayTime >h1 {
+    font-size: 100px;
+}
+.resetClass{
+    color: white;
+    background-color: red;
+}
+.pauseAndReset {
+    display: flex;
+    gap: 20px; /* Adds spacing between the buttons */
+    margin-top: 20px; /* Optional: Adds some spacing above the button group */
+}
+
+.pauseClass,
+.resumeClass,
+.resetClass {
+    height: 50px; /* Set the desired height */
+    width: 120px; /* Set the desired width */
+    border: none; /* Remove border */
+    font-size: 20px; /* Font size for the button text */
+    cursor: pointer; /* Cursor pointer on hover */
+}
+
+.pauseClass,
+.resumeClass {
+    color: blue;
+}
