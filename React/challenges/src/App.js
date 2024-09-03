@@ -2,8 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import Timer from './Challenges/1_TimerCountDown/Timer';
 import FileExplorer from './Challenges/2_FileExplorer/FileExplore';
-import Pagination from './Challenges/3_Pagination/pagination';
 import FAQ from './Challenges/4_FAQ/FAQ';
+import PaginationFrotendHandled from './Challenges/3_Pagination/PaginationFrotendHandled';
+import PaginationBackendHandled from './Challenges/3_Pagination/PaginationBackendHandled';
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
     <h1 className='Header'>Challenges</h1>
     {/* <Timer /> */}
     {/* <FileExplorer /> */}
-    {/* <Pagination /> */}
-    <FAQ />
+    {/* <PaginationFrotendHandled /> */}
+    <PaginationBackendHandled  />
+    {/* <FAQ /> */}
     <h2 className='Header' style={{marginTop:"30px"}}>-Nikita Karande</h2>
     </>
   );

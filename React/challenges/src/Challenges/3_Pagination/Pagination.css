@@ -1,0 +1,62 @@
+.product-container {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    gap: 20px;
+    /* Adds space between items */
+    justify-content: center;
+    /* Centers the content */
+}
+
+.product-item {
+    flex: 1 1 calc(25% - 20px);
+    /* Responsive width: 4 items per row */
+    max-width: 300px;
+    /* Maximum width of an item */
+    box-sizing: border-box;
+    /* Include padding and border in width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(220, 220, 220);
+}
+
+.product-image {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-size: 18px;
+    text-align: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+}
+
+.pagination>span {
+    border: 1px solid gray;
+    cursor: pointer;
+    padding: "15px 20px";
+    height: 53px;
+    width: 69px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.selectedPage{
+    background-color: rgb(220, 220, 220);
+}
+
+.buttonDisplay{
+    opacity: 0;
+}
