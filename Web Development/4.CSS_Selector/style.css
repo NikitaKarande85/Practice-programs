@@ -1,0 +1,19 @@
+.paragraphClass{
+    color: rgb(108, 30, 210);
+}
+
+#paragraphId{
+    color: rgb(238, 9, 40);
+}
+
+[nikita]{
+    color: deeppink;
+}
+
+[niks]:hover{
+    color: orange;
+}
+
+div p{
+    color: fuchsia;
+}
