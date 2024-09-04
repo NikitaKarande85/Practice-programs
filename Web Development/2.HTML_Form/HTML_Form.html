@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Form Concepts</h1>
+    <hr>
+    <!-- flipkart -->
+    <h1>flipkart</h1>
+    <p>Enter value and press enter key</p>
+    <form action="https://www.flipkart.com/search">
+        <input type="text" name="q" />
+    </form>
+
+    <hr>
+
+    <!-- Youtube -->
+    <h1>Youtube</h1>
+    <p>Enter value and press enter key</p>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query" />
+    </form>
+
+    <hr>
+
+    <!-- google -->
+    <h1>Google</h1>
+    <p>Enter value and press enter key / submit button</p>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q" />
+        <!-- button bydefault value is submit so its redirect onclick -->
+        <button>Submit</button>
+    </form>
+
+    <hr>
+
+    <!-- Multiple inputs -->
+    <h1>Multiple input</h1>
+    <p>https://www.google.com/search?q=cake&a=bird&c=laptop</p>
+    <p>Its ignore a and c values..its only accepted q</p>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q" />
+        <input type="text" name="a" />
+        <input type="text" name="c" />
+        <!-- button bydefault value is submit so its redirect onclick -->
+        <button>Submit</button>
+    </form>
+    <hr>
+
+    <h1>All input types</h1>
+    <form>
+        
+        <div>Note for lable- we write for of lable is same as input feild.when we click on lable its automatically focused that input.means we attached eachother for and id same name</div>
+        <label for="textid">Text type text</label>
+        <input style="display: block;" type="text" id="textid">
+        <label>Text type number</label>
+        <input style="display: block;" type="number" required placeholder="Enter number">
+        <label>Text type date</label>
+        <input style="display: block;" type="date">
+        <label>Text type time</label>
+        <input style="display: block;" type="time">
+        <label>Text type file</label>
+        <input style="display: block;" type="file">
+        <label>Text type tel</label>
+        <!-- mobile in open number keypad -->
+        <input style="display: block;" type="tel">
+        <label>Text type checkbox</label>
+        <input style="display: block;" type="checkbox">
+        <label>Text type email</label>
+        <input style="display: block;" type="email">
+        <label>Text type color</label>
+        <input style="display: block;" type="color">
+        <label>Text type radio</label>
+        <input style="display: block;" type="radio">
+        <label>Text type password</label>
+        <input style="display: block;" type="password">
+
+        <button>submit</button>
+        <button type="reset">reset</button>
+    </form>
+
+</body>
+
+</html>
