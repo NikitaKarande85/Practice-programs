@@ -1,0 +1,45 @@
+/* cascading */
+h1{
+    color: blue;
+}
+h1{
+    color:chartreuse
+}
+/* apply below css for h1 beacuse of cascading.compiler line line executed code */
+h1{
+    color: orangered;   
+}
+
+
+
+/* specificity-hover on class and see what is Specificity: (1, 0, 0) */
+.specificityclass.specificityclass.specificityclass{
+    background-color:darkolivegreen;
+}
+p.specificityclass#specificityId{
+    background-color:  deeppink;   /*(1,1,1)*/
+}
+#specificityId{
+    background-color: rgb(255, 94, 0);
+}
+#specificityId{
+    background-color: chartreuse;   /* specificity with cascading */
+}
+.specificityclass{
+    background-color: cadetblue;
+}
+p{
+    background-color: blueviolet;
+}
+
+
+ul{
+    color:cornflowerblue;
+    font-size: 30px;
+    font-family: cursive;
+}
+
+/* inherit */
+button{
+    font-family: inherit;
+}
