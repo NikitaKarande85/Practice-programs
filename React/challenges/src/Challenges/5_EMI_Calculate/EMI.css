@@ -1,0 +1,17 @@
+div div label{
+    font-size: 40px;
+    font-family: cursive;
+    margin-right: 50px;
+}
+
+input{
+    height: 50px;
+    width: 300px;
+    font-size: 30px;
+    font-family: cursive;
+}
+div div{
+    align-items: center;
+    align-content: center;
+    font-family: cursive;
+}

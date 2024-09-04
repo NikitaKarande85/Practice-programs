@@ -5,6 +5,7 @@ import FileExplorer from './Challenges/2_FileExplorer/FileExplore';
 import FAQ from './Challenges/4_FAQ/FAQ';
 import PaginationFrotendHandled from './Challenges/3_Pagination/PaginationFrotendHandled';
 import PaginationBackendHandled from './Challenges/3_Pagination/PaginationBackendHandled';
+import EMI from './Challenges/5_EMI_Calculate/EMI';
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
     {/* <Timer /> */}
     {/* <FileExplorer /> */}
     {/* <PaginationFrotendHandled /> */}
-    <PaginationBackendHandled  />
+    {/* <PaginationBackendHandled  /> */}
     {/* <FAQ /> */}
+    <EMI />
     <h2 className='Header' style={{marginTop:"30px"}}>-Nikita Karande</h2>
     </>
   );
