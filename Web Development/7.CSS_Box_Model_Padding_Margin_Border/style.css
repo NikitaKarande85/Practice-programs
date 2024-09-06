@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+.containt{
+    background-color: chartreuse;
+    max-width: 400px;                            /* width is 400 but when we add padding and border that time its adding 460(30(Top)+30(left)=460) so thats why we set box sizing */
+    padding: 30px;
+    border: 10px solid black;
+    margin: 40px;
+}
+.main{
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    width: 300px;
+    height: 300px;
+    border: 5px solid black;
+    margin: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+    outline: 10px solid #da0b84;
+}
+.photo{
+    width: 100%;
+}
+.inlineElementCss{
+    background-color: orangered;
+    width: 200px;   /*Not applied*/
+    height: 200px;   /*Not applied*/
+    padding: 20px;   /*applied but its going on below element*/
+    border: 5px solid black; /*applied but its going on below element*/
+}
+.inlineOverflowSolution{
+    background-color: orangered;
+    width: 100px;   
+    height: 100px;   
+    padding: 20px;   
+    border: 5px solid black; 
+    display: inline-block;      /*solution*/    
+}

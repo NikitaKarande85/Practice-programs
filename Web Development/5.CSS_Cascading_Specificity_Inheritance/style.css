@@ -1,3 +1,15 @@
+
+/*---------------------------------------------------
+ Note-Orders of specificity high to low
+----------------------------------------------------
+1->!important(No specifity)   
+2->Inline css(1000 specificity)
+3->#Id(1,0,0)
+4->.class(0,1,0)
+5->(p/button/h1)-(0,0,1)  very low specificity 
+-----------------------------------------------------*/
+
+
 /* cascading */
 h1{
     color: blue;
@@ -44,3 +56,14 @@ button{
     font-family: inherit;
     font-size: inherit;
 }
+
+
+/* override above all specificity using important keyword (dont use more)*/
+p.specificityclass{
+    background-color: rgb(255, 0, 140) !important;
+}
+
+p{
+    background-color: yellow !important;
+}
+

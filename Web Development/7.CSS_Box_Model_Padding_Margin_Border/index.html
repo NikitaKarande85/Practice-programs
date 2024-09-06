@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Padding margin border</title>
+</head>
+<body>
+    <h1>Box Model</h1>
+    <h1>1.Block type elements</h1>
+    <div class="containt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum assumenda laudantium, et nostrum quod temporibus debitis, cum soluta alias inventore, earum dolor maiores necessitatibus ex reprehenderit rerum itaque vero quos.</div>
+
+    <div class="main">
+        <img class="photo" src="./photo.png" />
+    </div>
+
+    <h1>2.Inline elements(Box Model not work properly)  </h1>
+    <h1>->1.Problem of span(-Its only work left and right but not top and bottom)</h1>
+    <span class="inlineElementCss">Span</span>
+    <span class="inlineElementCss">Span</span>
+    <div style="background-color: cyan;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, aliquid sunt temporibus dolorem odio nulla laborum accusamus ratione veritatis porro dolore natus omnis suscipit ipsa officiis quia et maxime ab?</div>
+
+    <h1>->Solution</h1>
+    <span class="inlineOverflowSolution">span</span>
+    <span class="inlineOverflowSolution">span</span>
+    <div style="background-color: cyan;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, aliquid sunt temporibus dolorem odio nulla laborum accusamus ratione veritatis porro dolore natus omnis suscipit ipsa officiis quia et maxime ab?</div>
+
+    <h1>Below elements are inline-</h1>
+    <h1>1.Image</h1>
+    <img style="height: 200px;" src="./photo.png" />
+    <h1>2.Video</h1>
+    <video src="" controls></video>
+    <h1>3.Iframe</h1>
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/lZObX0jltus?list=PLfEr2kn3s-br9ZFmejfLhAgMbGgbpdof8" title="Percentage: The Underestimated CSS Unit | Frontend Bootcamp Hindi | Ep.16" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+</body>
+</html>

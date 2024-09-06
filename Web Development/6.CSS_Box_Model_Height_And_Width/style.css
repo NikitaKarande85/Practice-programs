@@ -1,0 +1,53 @@
+.firstclass{
+    background-color: deeppink;
+}
+
+/* Not increased height   */
+.fixedwidthclass{
+    background-color: chartreuse;
+    width: 400px;                          /*problem to responsive*/
+}
+/* increased hight */
+.maxwidthclass{
+    background-color: chartreuse;
+    max-width: 400px;                      /*solution to responsive*/
+}
+
+.fixedheightclass{
+    background-color: cadetblue;
+    height: 100px;                        /*problem to responsive*/
+}
+/* increased hight */
+.minheightclass{
+    background-color: cadetblue;
+    min-height: 40px;                      /*solution to responsive*/
+}
+/* -----------------------------width---------------------------------- */
+
+.parentwidth{
+    background-color: red;   /* Suppose 800 width*/
+}
+.childwidth{
+    background-color: blue;  
+    width: 50%;                 /* Suppose 400 width*/
+}
+.innerchildwidth{
+    background-color: cornflowerblue;
+    width: 50%;                 /* Suppose 200 width*/
+}
+
+
+/* -------------------------------Height---------------------------------- */
+
+.parentheight{
+    background-color: red;   /* Suppose 300 height*/
+    height: 300px;             /* Required-after that percentage height will work */
+}
+.childheight{
+    background-color: blue;  
+    height: 50%;                 /* Suppose 200 height*/
+}
+.innerchildheight{
+    background-color: cornflowerblue;
+    height: 50%;                 /* Suppose 100 height*/
+}
