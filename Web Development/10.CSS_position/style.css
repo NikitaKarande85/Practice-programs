@@ -1,0 +1,53 @@
+
+.parent{
+    /* position: relative; */
+}
+/* -------------bydefault static position----------------------- */
+
+/* Bydefalult every element is static. So top,bottom,left,right is not work   */
+
+.positionStatic{
+    background-color: chartreuse;
+    /* top:20px;              not working in satic position*/    
+    /* bottom: 20px;          not working in satic position*/
+}
+
+
+/* --------------------------Relative---------------------------- */
+.positionRelative{
+    background-color: blueviolet;
+    position: relative;
+    top:13px;          /* applied */
+    bottom:100px;      /* High priority is top so bottom not applied */
+    left:20px;         /* applied */
+    right: 20px;       /* High priority is left so right not applied */
+}   
+
+/* --------------------------Absolute----------------------------- */
+/* parent position static sodun dusri asel tr parent la point krte otherwise browser viewport la point krte */
+/* Parent la sodat nahi bilkul. height delete hote pn element asto.top set kelyannter jr parent la kontich position nsel tr to browser chya viewport la point krun top,bottom,left,right fix krte*/
+.positionAbsolute{
+    background-color: chocolate;
+    position: absolute; /*Check in box model hight is decreased this element but element is present*/
+    /* top:20px;
+    bottom:100px;       
+    left:20px;        
+    right: 20px; */
+    /* inset: 10px; */
+}
+
+/* ------------------------Fixed------------------------------- */
+/* hight delete hote. top set kel ki only viewport la point krte */
+.positionFixed{
+    background-color: cornflowerblue;
+    position: fixed;
+    top:34px;
+}
+
+/* ------------------------sticky-------------------------------- */
+/* hold same position */
+.positionSticky{
+    background-color: deeppink;
+    position: sticky;
+    top:0px; 
+}
