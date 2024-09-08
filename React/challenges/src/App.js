@@ -6,6 +6,7 @@ import FAQ from './Challenges/4_FAQ/FAQ';
 import PaginationFrotendHandled from './Challenges/3_Pagination/PaginationFrotendHandled';
 import PaginationBackendHandled from './Challenges/3_Pagination/PaginationBackendHandled';
 import EMI from './Challenges/5_EMI_Calculate/EMI';
+import EMIWithRenge from './Challenges/6_EMI_Calculate_With_RengeInput/EMIWithRenge';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
     {/* <PaginationFrotendHandled /> */}
     {/* <PaginationBackendHandled  /> */}
     {/* <FAQ /> */}
-    <EMI />
+    {/* <EMI /> */}
+    <EMIWithRenge />
     <h2 className='Header' style={{marginTop:"30px"}}>-Nikita Karande</h2>
     </>
   );

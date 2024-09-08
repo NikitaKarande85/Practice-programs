@@ -1,0 +1,26 @@
+.buttoncss{
+    width: 90px;
+    height: 50px;
+    display: inline-table;
+    gap:30px;
+    border: none;
+}
+.main{
+    display: flex;
+    gap: 30px;
+}
+.selected{
+    background-color: #0075FF;
+    color: white;
+}
+.label{
+    font-size: 30px;
+}
+.input{
+    width: 300px;
+    height: 40px;
+    margin-left: 20px;
+    border: none;
+    background-color: rgb(225, 233, 248);
+    font-size: 30px;
+}

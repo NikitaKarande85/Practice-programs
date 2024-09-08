@@ -1,0 +1,31 @@
+:root {
+    font-size: 10px;
+}
+
+/* -------------------------em -------------------------------*/
+.emclass{
+    background-color: darkorange;
+    font-size: 1em;
+}
+.parentemclass{
+    font-size: 1em;         /* 16px */
+    background-color: aqua;
+}
+.emchild{
+    font-size: 2em;  /* reffer parent font size (16*2=32px) */ 
+}
+
+/* -------------------------rem -------------------------------*/
+
+.rremClass{
+    background-color: blueviolet;
+    font-size: 1rem;   /* 1 rem = 16px */
+}
+
+.parentrremclass{
+    font-size: 1rem;         /* 16px */
+    background-color: aqua;
+}
+.rremchild{
+    font-size: 2rem;  /* reffer parent font size (16*2=32px) */ 
+}

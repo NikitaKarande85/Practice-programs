@@ -24,7 +24,7 @@ h1{
 
 
 
-/* specificity-hover on class and see what is Specificity: (1, 0, 0) */
+/* specificity-hover on class and see what is Specificity: (0, 1, 0) */
 .specificityclass.specificityclass.specificityclass{
     background-color:darkolivegreen;
 }

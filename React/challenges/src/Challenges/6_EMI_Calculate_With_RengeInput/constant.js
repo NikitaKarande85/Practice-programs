@@ -1,0 +1,1 @@
+export const tenureValue=[1,3,4,5,6,12];
