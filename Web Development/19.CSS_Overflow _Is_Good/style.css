@@ -1,0 +1,10 @@
+.box{
+    max-width: 250px;
+    border: 5px solid black;
+}
+
+@media (width< 200px) {
+    .box{
+        font-size: 7px;
+    }
+}

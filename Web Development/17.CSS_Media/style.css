@@ -1,0 +1,62 @@
+.box{
+    height: 200px;
+    width:200px;
+    background-color: chartreuse;
+    border:12px solid blue;
+    print-color-adjust: exact;  /* we are setting by default permissions to chrome */
+    -webkit-print-color-adjust: exact; /* we are setting by default permissions to chrome for display background color */
+}
+
+/* -------------print time set only------------------------------ */
+/* @media print {
+    .box{
+        background-color: deeppink;
+        border:12px solid red;
+    }
+} */
+
+/* ----------------without print only for screen change---------- */
+/* @media screen {
+    .box{
+        background-color: deeppink;
+        border:12px solid red;
+    }
+} */
+
+/* ------------ALL-> both side apply-screen, print------------------ */
+/* @media all {
+    .box{
+        background-color: deeppink;
+        border:12px solid red;
+    }
+} */
+
+@media (min-width: 500px) {
+    .box {
+        border: 25px solid rgb(103, 15, 161);
+        background-color: rgb(10, 7, 8);
+    }
+}
+
+/* @media print and (min-width: 800px) {
+    .square  {
+        border: 25px solid red;
+        background-color: hotpink;
+    }
+}  */
+
+
+/* @media (width <= 700px) {
+    .square  {
+        border: 25px solid red;
+        background-color: hotpink;
+    }
+} */
+
+
+/* @media (500px <= width <= 700px) {
+    .square  {
+        border: 25px solid red;
+        background-color: hotpink;
+    }
+} */

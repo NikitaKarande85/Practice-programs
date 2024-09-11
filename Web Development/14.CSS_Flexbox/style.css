@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------- */
+.class1 {
+    background-color: rgb(193, 235, 151);
+    border: 3px solid rgb(9, 185, 238);
+    /* width: 600px;     Not working- Decrease chrome width time.still its shrink */
+    flex-shrink: 0;/* Width solution */
+    /* flex-grow: 1; */
+    /* Content according width grow */
+    /* width: max-content; */
+}
+
+.class2 {
+    background-color: rgb(230, 183, 150);
+    border: 3px solid rgb(13, 15, 1);
+}
+
+.class3 {
+    background-color: rgb(245, 158, 204);
+    border: 3px solid rgb(23, 20, 165);
+}
+
+.parent1 {
+    border: 3px solid rgb(238, 9, 9);
+    display: flex;
+    padding: 10px;
+}
+
+/* ----------------------------------------------------------- */
+
+.classWidth1 {
+    background-color: rgb(193, 235, 151);
+    border: 3px solid rgb(9, 185, 238);
+    flex-basis: max-content;
+    /* Keeps them at content width */
+    margin: 0 10px;
+    /* Adds spacing between items */
+}
+
+.classWidth2 {
+    background-color: rgb(230, 183, 150);
+    border: 3px solid rgb(13, 15, 1);
+    flex-basis: max-content;
+    /* space-between */
+    margin: 0 10px;
+    /* space-between-Adds spacing between items */
+}
+
+.classWidth3 {
+    background-color: rgb(245, 158, 204);
+    border: 3px solid rgb(23, 20, 165);
+    flex-basis: max-content;
+    /* space-between */
+    margin: 0 10px;
+    /* space-between-Adds spacing between items */
+}
+
+.parent2 {
+    border: 3px solid rgb(238, 9, 9);
+    display: flex;
+    /* padding: 10px;    */
+    margin-top: 20px;
+    height: 200px;
+    /* justify-content: center; */
+    align-items: center;
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+    /* justify-content: baseline; */
+    /* align-items: stretch; */
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* width: max-content; */
+}

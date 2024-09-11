@@ -1,0 +1,62 @@
+.imgClass{
+    float: left;
+    padding: 8px;
+ 
+}
+.parent{ 
+    display: flow-root;  /* Solution-when we decrese paragraph content background color is also decresed */
+    background-color: skyblue;
+}
+
+/* ------------------------------------------------------------------- */
+.box {
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 4rem;
+    padding: 1rem;
+    /* float: left; */
+    /* float: right; */
+    /* position: absolute; */
+}
+
+.box-1 {
+    background-color: green;
+}
+
+.box-2 {
+    background-color: blueviolet;
+}
+
+.box-3 {
+    background-color: blue;
+}
+
+.box-4 {
+    background-color: brown;
+    clear: left;
+}
+
+.box-5 {
+    background-color: coral;
+}
+
+.box-6 {
+    background-color: darkblue;
+}
+
+.box-7 {
+    background-color: darkred;
+}
+
+.box-8 {
+    background-color: darkslategray;
+}
+
+.box-9 {
+    background-color: gray;
+}
+
+.box-10 {
+    background-color: navy;
+}

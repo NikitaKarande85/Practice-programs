@@ -1,0 +1,26 @@
+.box{
+    height: 100px;
+    width: 100px;
+}
+.box1{
+    background-color: blue;
+    box-shadow: 0 5px 16px;
+    /* position: absolute;  
+    z-index: 5; */
+}
+.box2{
+    background-color: rgb(224, 140, 14);
+    margin-left: 10px;
+    box-shadow: 0 5px 16px;
+    margin-top: -14px;
+
+    /* z index always need position */
+    z-index: 2;
+    position: relative;  
+}
+.box3{
+    background-color: rgb(221, 11, 11);
+    box-shadow: 0 5px 16px;
+    margin-left: 20px;
+    margin-top: -14px;
+}
