@@ -1,0 +1,14 @@
+:root{
+    /* variable */
+    --mycolor-variable:red;
+    --rounded: 24px;
+}
+.variable{
+    /* use variable */
+    color: white;
+    background-color: var(--mycolor-variable); 
+    border-radius: var(--rounded);
+
+    /* we can overide our variable  */
+     --mycolor-variable: #692bce;
+}

@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    /* how many coloumn and rows */
+    /* grid-column: 3 / 5;
+       grid-row: 2 / 4; */
+    /* grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); */
+    /* grid-template: repeat(6, 100px) / repeat(4, 100px); */
+    /* grid-template-columns:repeat(5,1fr); */
+    /* fr --> fraction */
+    /* grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr; */
+    /* grid-template-columns:20% 20% 20%; */
+    /* grid-template-columns:70px 70px 70px 70px 70px; */
+    /* grid-template-columns:(4,auto); */
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(4, 70px);
+
+    /* column-gap: 10px;
+    row-gap:10px; */
+    gap: 10px;
+
+    /* grid layout shows- columns otherwise rows */
+    /* grid-auto-flow: column; */
+    /* we are giving size those newly creating rows and column */
+    /* grid-auto-columns: 100px;
+    grid-auto-rows: 100px; */
+}
+
+.box {
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.box-1 {
+    background-color: green;
+
+    /* left right */
+    /* margin-inline: auto; */
+
+    /*  top bottom */
+    /* margin-block: 10px; */
+    /* 
+    align-self: stretch;
+    justify-self: stretch; */
+}
+
+.box-2 {
+    background-color: blueviolet;
+}
+
+.box-3 {
+    background-color: blue;
+}
+
+.box-4 {
+    background-color: brown;
+}
+
+.box-5 {
+    background-color: coral;
+
+}
+
+.box-6 {
+    background-color: darkblue;
+}
+
+.box-7 {
+    background-color: darkred;
+}
+
+.box-8 {
+    background-color: darkslategray;
+}
+
+.box-9 {
+    background-color: gray;
+}
+
+.box-10 {
+    background-color: navy;
+}
+
+/* ------------------------------------------------------------------- */
+
+.containerProperties {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(4, 50px);
+}
+
+.mybox {
+    background-color: red;
+
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+
+    /* without span same output */
+    /* grid-column-start: 2;
+    grid-row-start:2 ;
+    grid-row-end: 4;
+    grid-column-end: 4; */
+
+    /* set 1 text center */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    /* set one position */
+    /* grid-column-start: 4;
+    grid-row-start: 3; */
+}
