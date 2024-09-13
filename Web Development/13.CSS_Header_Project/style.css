@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    font-family: cursive;
+}
+
+.header {
+    background-color: blue;
+    height: 15vh;
+    color: white;
+    padding: 4rem;
+    /* background image */
+    background-image: url(/13.CSS_Header_Project/background.png);
+    background-size: 144px;
+    background-repeat: no-repeat;
+
+    /* Set last  background img*/
+    background-position-x: 100%;
+    background-position-y: -6px;
+    display: flex;
+    margin-left: 4px;
+}
+
+.personImg img {
+    width: 2rem;
+    height: 2rem;
+    border: 5px solid white;
+    border-radius: 100%;
+    margin-left: -1rem;
+}
+
+.personImg {
+    margin-left: 30px;
+}
