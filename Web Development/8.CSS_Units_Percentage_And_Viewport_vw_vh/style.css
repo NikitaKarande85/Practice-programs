@@ -23,6 +23,8 @@
 }
 
 /* browser chi width kmi krel tse khalil sizes pn chote mothe hotat */
+/* vh(viewport height)-> browser chi height */
+/* vw(viewport width)-> browser chi width */
 .viewport{
     background-color: chocolate;
     width: 50vw;

@@ -41,7 +41,7 @@
 
 .parentheight{
     background-color: red;   /* Suppose 300 height*/
-    height: 300px;             /* Required-after that percentage height will work */
+    height: 300px;             /* Required- after that percentage height will work */
 }
 .childheight{
     background-color: blue;  
