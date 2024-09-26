@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    font-family: "Salsa", cursive;
+}
+.section{
+    min-height: 100vh;
+    /* background-color: #f99501; */
+    background-image: url(./images/orange-backdrop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.jhalar{
+    width: 250px;
+    margin-bottom: -240px;
+}
+.content{
+    font-size: 46px;
+    max-width: 400px;
+}
+.paragraphAndAudio{
+    margin-left: 15rem;
+}
+.audioContainer{
+    background-color: #e7b3b3;
+    max-width: 500px;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+audio::-webkit-media-controls-play-button,
+     audio::-webkit-media-controls-panel {
+     background-color: #e7b3b3;
+     color: #000;
+     }
+@media (max-width:840px){
+    .deepaksecond{
+        display: none;
+    }
+    .deepakfirst{
+        display: block;
+        margin-left: auto;
+    }
+    .paragraphAndAudio{
+        margin-left: 1rem;
+    }
+    .jhalar{
+        margin-bottom: 0;
+    }
+    .audioContainer{
+        max-width: max-content;
+    }
+    .content{
+        font-size: 32px;
+    }
+}
+
+@media (max-width:540px){
+    .deepakfirst{
+        width: 100%;
+        max-width: 300px;
+    }
+}

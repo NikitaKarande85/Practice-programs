@@ -22,7 +22,8 @@ main {
     margin: 1.5rem;
     display: flex;
     border-radius: 10px;
-    overflow: hidden;
+    /* overflow hidden set for radius */
+    overflow: hidden;   
     /* margin-inline: auto; */
     /* margin: auto; */
     max-width: 910px;

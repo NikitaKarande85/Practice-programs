@@ -38,10 +38,10 @@ body {
 .classWidth1 {
     background-color: rgb(193, 235, 151);
     border: 3px solid rgb(9, 185, 238);
-    flex-basis: max-content;
+    flex-basis: 200px; /* In flex width is not working so we are using flex basis for width */
     /* Keeps them at content width */
     margin: 0 10px;
-    /* Adds spacing between items */
+    /* Adds spacing between items left and right */
 }
 
 .classWidth2 {

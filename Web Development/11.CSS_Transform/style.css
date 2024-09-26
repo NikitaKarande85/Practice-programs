@@ -9,8 +9,8 @@
     width: 300px;
     height: 150px;
     background-color: aqua;
-    transform: scale(1);
-    transform-origin: 0 0; 
+    transform: scale(1);  /* this box size is incresed but not increase height.check in box model */
+    transform-origin: 0 0; /*we can set- kuthun size vadhvaychi */
     opacity: 0.5;            /*all element are display transferent*/
     /* transform: rotate(45deg); */
     /* transform: translateY(100%);  */
@@ -20,7 +20,7 @@
 .boxAlphaChannel{
     width: 300px;
     height: 150px;
-    background-color: rgba(255, 0, 0, 0.123);  /* alpha channel behave same as opacity but except elements */
+    background-color: rgba(255, 0, 0, 0.123);  /* alpha channel behave same as opacity but except elements text */
     position: absolute;
 }
 
@@ -34,15 +34,15 @@
     box-shadow:rgba(0, 0, 0, 0.35) 20px 12px 10px;
 
     /* hover time roatate */
-    transition: transform 900ms;
+    transition: transform 900ms;   /* rotate */
 
     /* set in middle -below style */
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);  /* rotate */
 }
 
 .nikita:hover {
-    transform: rotate(45deg) ;
+    transform: rotate(45deg) ;  /* rotate */
 }

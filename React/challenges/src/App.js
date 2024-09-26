@@ -7,19 +7,25 @@ import PaginationFrotendHandled from './Challenges/3_Pagination/PaginationFroten
 import PaginationBackendHandled from './Challenges/3_Pagination/PaginationBackendHandled';
 import EMI from './Challenges/5_EMI_Calculate/EMI';
 import EMIWithRenge from './Challenges/6_EMI_Calculate_With_RengeInput/EMIWithRenge';
+import CustomModal from './Challenges/7_Modal/Custom_Modal';
+import Password from './Challenges/8_Password_Generator/Password';
+import ProgressBar from './Challenges/9_ProgressBar/ProgressBar';
+import Undoable_Counter from './Challenges/10_Undoable_Counter/Undoable_Counter';
 
 function App() {
   return (
     <>
-    <h1 className='Header'>Challenges</h1>
     {/* <Timer /> */}
     {/* <FileExplorer /> */}
     {/* <PaginationFrotendHandled /> */}
     {/* <PaginationBackendHandled  /> */}
     {/* <FAQ /> */}
     {/* <EMI /> */}
-    <EMIWithRenge />
-    <h2 className='Header' style={{marginTop:"30px"}}>-Nikita Karande</h2>
+    {/* <EMIWithRenge /> */}
+    {/* <CustomModal /> */}
+    {/* <Password /> */}
+    {/* <ProgressBar /> */}
+    <Undoable_Counter />
     </>
   );
 }

@@ -33,11 +33,11 @@
     bottom:100px;       
     left:20px;        
     right: 20px; */
-    /* inset: 10px; */
+    /* inset: 10px;  The inset property is a shorthand property(top,bottom,left,right) */
 }
 
 /* ------------------------Fixed------------------------------- */
-/* hight delete hote. top set kel ki only viewport la point krte */
+/* hight delete hote. top set kel ki only viewport la point krte. absolute sarkhe parent la nahi krt point. only viewport*/
 .positionFixed{
     background-color: cornflowerblue;
     position: fixed;

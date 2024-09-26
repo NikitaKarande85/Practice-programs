@@ -1,31 +1,37 @@
-:root {
-    font-size: 10px;  /*rem*/
-}
+/*rem*/
+/* :root {
+    font-size: 10px;  
+} */
 
 /* -------------------------em -------------------------------*/
 .emclass{
-    background-color: darkorange;
-    font-size: 1em;
+    background-color: darkorange;   /* 16px by default*/
 }
 .parentemclass{
-    font-size: 1em;         /* 16px */
+    font-size: 32px;         /* set parent 32px */
     background-color: aqua;
 }
 .emchild{
-    font-size: 2em;  /* reffer parent font size (16*2=32px) */ 
+    font-size: 2em;  /* reffer parent font size(32px = 1em) (32*2=64px) */ 
+}
+.childChild{
+    font-size: 2em;  /* reffer parent font size(64px = 1em) (64*2=128px) */
+    background-color: blue;
 }
 
 /* -------------------------rem -------------------------------*/
 
+/*1. rem is not reffer self parent font size..its take bydefault 16px=1rem
+  2.rem only reffer html tag font size. If we set on root 10px then its reffer to 10px=1rem */
+
 .rremClass{
-    background-color: blueviolet;
-    font-size: 1rem;   /* 1 rem = 16px */
+    background-color: blueviolet;  /* 1 rem = 16px */
 }
 
 .parentrremclass{
-    font-size: 1rem;         /* 16px */
+    font-size: 2rem;         /* 32px */
     background-color: aqua;
 }
 .rremchild{
-    font-size: 2rem;  /* reffer parent font size (16*2=32px) */ 
+    font-size: 2rem;  /* 32px */    
 }

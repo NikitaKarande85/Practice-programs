@@ -70,7 +70,7 @@ body {
     /* width: min-content; */
     /* flex-shrink: 0; */
     /* flex-grow: 1; */
-    /* order: -20; */
+    /* order: -20;          set elements numberwise  */
 }
 
 .parent a {
@@ -83,7 +83,7 @@ body {
     /* flex-basis: 100%; */
     /* flex-shrink: 0; */
     /* flex-grow: 1; */
-    /* margin-left: auto;
+    /* margin-left: auto;     jr element block asel tr position left krnyasathi use krtata auto
     margin-right: auto; */
 
     /* order: -11; */
@@ -93,6 +93,8 @@ body {
     /* margin-block: auto; */
 }
 
+/* parent chya aat mdhle sgle */
+/* parent->child */
 .parent > * {
     /* width: 200px; */
     width: 300px;
@@ -100,6 +102,8 @@ body {
 }
 
 
+/* parent mdhle child che sgle ani tyachya pn aatle chile la style */
+/* parent->child->child */
 .parent > * + * {
     /* margin-left: 16px; */
 }
