@@ -452,7 +452,7 @@ console.log(nestedObj.Address.pincode); //415304
 //   Address:@8679
 // }
 
-// Every object take new menmory
+// Every object take new memory
 
 // {
 //   Mp:"Shalgaon",               @8679
@@ -669,3 +669,38 @@ console.log("deepobj",deepobj);
 // 2.use lodash npm
 // lodash-> __.cloneDeep(deepobj)
 
+
+
+// -----------------------------combined assignment/compound operator-----------
+
+// const username = 'Niks'
+
+// let num = 5
+
+// debugger
+// num = num + 5
+// num = num + 5
+// num = num + 5
+// num = num + 5
+
+// num += 5
+// num += 5
+// num += 5
+// num += 5
+
+// num = num * 2
+// num = num * 2
+// num = num * 2
+
+// num *= 2
+// num *= 2
+// num *= 2
+
+// const newNum = ++num
+// const newNum = --num
+
+// const newNum = num++
+// const newNum = num--
+
+// num = num + 1
+// num += 1
