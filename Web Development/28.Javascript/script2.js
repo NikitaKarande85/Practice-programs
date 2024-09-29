@@ -180,7 +180,7 @@ function outer(){
     let a=200;
     let b=100
     function inner(){
-        debugger;
+        // debugger;
         return a+b;
     }
     return inner()
@@ -195,3 +195,162 @@ console.log("store",store) //300
 
 
 // --------------------------method and function diff---------------------
+
+// method is also function but when we using in object that function that is called method.
+
+//method example
+const obj={
+    a:1000,
+    b:2000,
+    Add:function(){     //methods(this function call in object)
+        return this.a+this.b;
+    },
+    Sub:function(){
+        console.log("I am method")
+        return this.a-this.b;
+    },
+    multiplication(){
+        console.log("I am method")
+        return this.a-this.b;
+    }
+}
+
+console.log(obj.Add());  //3000
+
+// function example
+function Addition(){
+    return "I am function";
+}
+
+
+// -------------------------Arrow function------------------------------
+
+const Arrowfun=()=>{
+    return "arraow function"    //Explicitly return
+}
+
+const sum=(sum)=>sum*sum;      //Implicitly return
+// const sum2=sum=>sum*sum;
+// const randomNum=()=>(Math.floor(Math.random()*10)+1);
+//print 1 to 10 random number
+
+//anonymus and arrow function
+// setTimeout(()=>{
+
+// },1000)
+
+
+// -----------------------for of vs for in javascript---------------------------
+
+// for of  - using for array iterate
+// for in  - using for object iterate
+
+//for of
+const numbers=[1,3,4,5,6,7];
+for(const num of numbers){
+    console.log("num",num);  //1,3,4,5,6,7  //num holding directly value not index
+}
+
+//for in
+const objForIn={
+    name:"nikita",
+    rollNo:11,
+    company:"Google"
+}
+
+for(const key in objForIn){
+    console.log(`${key} :`,objForIn[key]);
+}
+
+console.log(Object.keys(objForIn));  //its convert in array so we can use for of
+console.log(Object.values(objForIn));
+console.log(Object.entries(objForIn));
+
+
+// --------------------forEach---------------------------------------
+
+// forEach does not return any value
+const fruits=["rose","lotus","jai"];
+
+const arr=fruits.forEach((fruit)=>{
+    console.log("fruit",fruit);
+    return fruit;
+})
+
+console.log("fruit",arr); //undefined
+
+
+// ---------------------------map,filter,reduce---------------------------------
+
+//map
+const myArray=["Nikita","Santosh","Vaishali","Omkar"];
+
+const mapArray=myArray.map((item,index,array)=>{
+    console.log("map array",item);
+    console.log("map index",index);
+    console.log("map array",array);
+    return item;
+})
+
+console.log("--mapArray--",mapArray);  //return array
+// [
+//     "Nikita",
+//     "Santosh",
+//     "Vaishali",
+//     "Omkar"
+// ]
+
+
+//filter
+const filterArray=myArray.filter((item,index,array)=>{
+    return item.includes("Nik");
+})
+
+console.log("--filterArray--",filterArray); 
+// [
+//     "Nikita"
+// ]
+
+
+
+//reduce
+const myNumbers=[2,3,4]
+const reduceArray=myNumbers.reduce((accumlator,item,index,array)=>{
+    console.log(accumlator); //0,2,3,4
+    return accumlator+item;
+},0);
+
+//accumlator is stored 1 value of array(2) otherwise store our (0) variable
+console.log("--reduceArray--",reduceArray); 
+
+
+// --------------------------some and every--------------------------------
+
+const generalArray=[3,4,5,6,7]
+
+//some= If any one condition got true then its return true.
+const someArray=generalArray.some((item,index,array)=>{
+    return item==5;  //its loop break when he got 5 number
+})
+console.log("someArray",someArray);  //true
+
+
+
+//every= If all items are matched with condition then its return true otherwise false.
+const everyArray=generalArray.every((item,index,array)=>{
+    return item==5;  //its loop 1st time
+})
+console.log("everyArray",everyArray); //false
+
+
+
+
+// -----------------------Argument keyword-----------------------------------
+
+
+Add(2,3,4);
+function Add(){  //without pass argument we can access inside of the function
+    console.log("Argument",arguments)  //[2,3,4]
+}
+
+// --------------------------------------------------------------------------
