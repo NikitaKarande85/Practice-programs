@@ -338,7 +338,7 @@ console.log("someArray",someArray);  //true
 
 //every= If all items are matched with condition then its return true otherwise false.
 const everyArray=generalArray.every((item,index,array)=>{
-    return item==5;  //its loop 1st time
+    return item==5;  //its loop break 1st time
 })
 console.log("everyArray",everyArray); //false
 

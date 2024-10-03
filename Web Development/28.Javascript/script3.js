@@ -44,7 +44,7 @@ console.log("updatedUser", updatedUser);
 // spread operator - work on spreading
 // rest operator- work on combine
 
-function Add(...arr) {  //rest parameter accepted
+function Add(...arr) {  //rest parameter accepted and combined data
     console.log("arr", arr);  //[1, 2, 3, 4, 5, 6]
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -172,3 +172,205 @@ AcceptdestructeringObj(destructingObj)
 // -document.body.children[0]
 // -document.body.children[0].innerHTML
 //  output- 'Javascript concepts'
+
+
+
+// ------------------------------Selecting element--------------------------
+
+// const allImages = document.images  //get all images
+// const allImages = document.getElementsByTagName('img')
+// const cssImage = document.getElementsByClassName('css-image')[0]
+// const cssImage = document.getElementById('css-image')
+// const cssImage = document.querySelectorAll('#css-image')
+// const cssImage = document.querySelector('.css-image')     //more use
+// const jsImage = document.querySelector('[alt="javascript roadmap"]')
+// const ul = document.querySelector('ul')
+
+const allImages = document.querySelectorAll('img')
+
+// const imageInsideUl = ul.querySelector('.css-image')
+
+const imagesUrl = [
+  'https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg',
+  'https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=',
+  'https://media.istockphoto.com/id/1181366400/photo/in-the-hands-of-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-on.jpg?s=612x612&w=0&k=20&c=jWUMrHgjMY9zQXsAwZFb1jfM6KxZE16-IXI1bvehjQM=',
+]
+
+// allImages[0].src = imagesUrl[0]
+// allImages[1].src = imagesUrl[1]
+// allImages[2].src = imagesUrl[2]
+
+// for (let i = 0; i < allImages.length; i++) {
+//   allImages[i].src = imagesUrl[i]
+// }
+
+allImages.forEach((image, i) => {
+  image.src = imagesUrl[i]
+})
+
+
+
+// ----------Difference between innerText and textContent-------------
+
+document.querySelector('.myclass').innerText;//'Javascript concepts'
+document.querySelector('.myclass').textContent;//'Javascript               concepts'
+
+// inner text ignore space and textcontnd not ignore
+
+
+// go to element tab in browser and on element right click and copy the JS path
+// ->document.querySelector("body > h1")
+
+
+
+// -------------------setAttribute and getAttribute---------------------
+
+document.querySelector('.myclass').getAttribute("class");
+{/* <h1 class="myclass">Javascript concepts</h1> */}
+
+document.querySelector('.myclass').setAttribute("class","hello")
+{/* <h1 class="hello">Javascript concepts</h1> */}
+
+document.querySelector('.myclass').setAttribute("new","bye")
+{/* <h1 class="myclass" new="bye">Javascript concepts</h1> */}
+
+
+
+
+// ------------------------change style----------------------------
+
+const h1 = document.querySelector('h1')
+const paragraph = document.querySelector('p')
+const allLinks = document.querySelectorAll('a')
+
+// console.log(paragraph.innerHTML);
+
+// paragraph.innerHTML = '<h4>Hiii</h4>'
+
+h1.style.color = 'hotpink'
+h1.style.backgroundColor = 'skyblue'
+
+// for (let i = 0; i < allLinks.length; i++) {
+//   allLinks[i].style.color = 'teal'
+// }
+
+
+for (const link of allLinks) {
+    //1st way
+
+    // link.style.color = 'teal'
+    // link.style.textDecorationLine = 'none'
+    // link.style.fontWeight = '700'
+    // link.style.fontFamily = 'cursive'
+    // link.style.fontSize = '18px'
+
+    //2nd way
+
+    // link.style.cssText = `
+    //     color: teal;
+    //     text-decoration-line: none;
+    //     font-weight: 700;
+    //     font-family: cursive;
+    //     font-size: 18px;
+    // `
+
+    //3rd way
+
+    // link.className = 'green-link'
+
+    //4th way 
+
+    // link.setAttribute('class', 'green-link')
+
+    //5 th and final way
+
+    link.classList.add('green-link')
+    link.classList.remove('my-link')
+    // link.classList.toggle('my-link') 1.true-> remove class 2.false->add class
+}
+
+
+// --------------append and append child--------------------
+
+
+const h1 = document.querySelector('h1')
+const container3 = document.querySelector(".container")
+const card = document.querySelector('.card')
+
+// container3.appendChild(h1)                       //cut paste element
+// container3.appendChild(h1.cloneNode(true))       //copy paste element
+
+// for (let i = 2; i <=100; i++) {
+//     const newCard = card.cloneNode()
+//     newCard.innerText = i
+//     container3.append(newCard)
+// }
+
+
+
+// --------------------Creating element-------------------------------
+
+const h1 = document.querySelector('h1')
+const container2= document.querySelector('.container')
+// const firstImage = document.querySelector("img")
+
+const paragraph2 = document.createElement('p')
+// paragraph2.innerText = 'Hello'
+// paragraph2.classList.add('my-para')
+
+// container2.append(paragraph2)   //append means add element in the last
+
+// container2.appendChild(h1)
+// container2.appendChild(h1.cloneNode(true))
+
+for (let i = 1; i <= 100; i++) {
+  const newImg = document.createElement('img')
+  newImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png`
+  container2.append(newImg)
+}
+
+// const newImage = document.createElement('img')
+
+// newImage.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png`
+
+// container2.append(newImage)
+
+
+// -----------------------------------------------------------
+
+let container = document.querySelector('.container')
+
+//correct way
+for(let i = 1; i <= 100; i++) {
+    const imgContainer = document.createElement('div')
+    imgContainer.classList.add('img-container')
+
+    const newImage = document.createElement('img')
+    newImage.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png`
+
+    const paragraph = document.createElement('p')
+    paragraph.innerText = i
+
+    imgContainer.append(newImage, paragraph)
+    container.append(imgContainer)
+}
+
+
+//not use more
+
+// let myHTML = ``
+
+// for (let i = 1; i <= 100; i++) {
+//   myHTML += `
+//     <div class="img-container">
+//         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png">
+//         <p>${i}</p>
+//     </div>
+//     `
+// }
+
+// container.innerHTML = myHTML
+
+const myImg = document.querySelector("body > div > div:nth-child(5)")
+
+// -----------------------------------------------------------------------

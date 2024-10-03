@@ -1,0 +1,25 @@
+.red{
+    background-color: red;
+    height: 400px;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.green{
+    background-color: greenyellow;
+    height: 300px;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.blue{
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+}
