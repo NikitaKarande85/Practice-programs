@@ -1,0 +1,21 @@
+Chrome->
+1.ColorPick Eyedropper 
+2.Measure-it
+3.VisBug
+
+------------------------------------------
+VS code->
+1.Thunder Client(Postman)2.JavaScript (ES6) code snippets
+3.Live Server
+4.Auto Rename Tag
+
+------------------------------------------
+Game->
+1.https://cssgridgarden.com/
+2.https://flexboxfroggy.com/
+
+
+DSA:
+https://docs.google.com/spreadsheets/d/1-wKcV99KtO91dXdPkwmXGTdtyxAfk1mbPXQg81R9sFE/edit?gid=0#gid=0
+
+	
