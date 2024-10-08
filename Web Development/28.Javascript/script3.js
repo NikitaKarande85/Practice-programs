@@ -126,7 +126,7 @@ console.log("target", target)  //{react: 'see bootcamp', datastructure: 'solve 4
 console.log("react", react)  //react see bootcamp
 
 
-function AcceptdestructeringObj({name,aim}){ //destructing (same as array only in [])
+function AcceptdestructeringObj({name,aim}){ //destructing (same as array only in [])  function AcceptdestructeringObj([name,aim]){
     console.log("name,aim:- ",name,aim); //niks join google company
 }
 AcceptdestructeringObj(destructingObj)
@@ -303,7 +303,7 @@ const card = document.querySelector('.card')
 // for (let i = 2; i <=100; i++) {
 //     const newCard = card.cloneNode()
 //     newCard.innerText = i
-//     container3.append(newCard)
+//     container3.append(newCard) //added new card in container3
 // }
 
 

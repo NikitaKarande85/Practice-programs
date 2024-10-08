@@ -2,6 +2,7 @@
     background-color: deeppink;
 }
 
+/* ...............width.................. */
 /* Not increased height   */
 .fixedwidthclass{
     background-color: chartreuse;
@@ -13,6 +14,7 @@
     max-width: 400px;                      /*solution to responsive*/
 }
 
+/* ...............height.................. */
 .fixedheightclass{
     background-color: cadetblue;
     height: 100px;                        /*problem to responsive*/
@@ -41,7 +43,7 @@
 
 .parentheight{
     background-color: red;   /* Suppose 300 height*/
-    height: 300px;             /* Required- after that percentage height will work */
+    height: 300px;             /* Required- after that child percentage height will work */
 }
 .childheight{
     background-color: blue;  

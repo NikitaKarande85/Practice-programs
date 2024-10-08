@@ -343,6 +343,8 @@ const orResult5 = undefined || console.log('hello2')
 //     ''
 //     undefined
 //     null
+
+//check below in console
 // Boolean(0)
 // Boolean('')
 
@@ -473,6 +475,7 @@ const ObjectOfInfo={
 }
 ObjectOfInfo.MobileNumber=4545566667; 
 console.log(ObjectOfInfo) //but still obj address same
+
 // ObjectOfInfo={} //error beacuse we can't change base
 
 
@@ -571,7 +574,7 @@ console.log(arr);//[ 34, 56, 23, 'nikita' ]
 const MyPagalArray=[1]
 MyPagalArray.firstName="Nikita";
 console.log(MyPagalArray);//[ 1, firstName: 'Nikita' ]
-console.log(MyPagalArray.length); //1(pakad gye🤣)
+console.log(MyPagalArray.length); //1(pakade gye🤣)
 
 
 //---------------slice or splice difference------------------------
@@ -665,13 +668,14 @@ console.log("deepobj",deepobj);
 // deepobj { name: 'shallow', address: { village: 'samee', code: 2332 } }
 
 //deepcopy not supported to function and date
-// solution->1.copy one by one key in another Object
+// solutions->
+//1.copy one by one key in another Object(for loop)
 // 2.use lodash npm
 // lodash-> __.cloneDeep(deepobj)
 
 
 
-// -----------------------------combined assignment/compound operator-----------
+// -----------------------combined assignment/compound operator-----------
 
 // const username = 'Niks'
 

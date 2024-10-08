@@ -51,12 +51,14 @@ function nai(){
 
 // --------------------Hoisting----------------------------------------
 
+//geeksforgeeks
 // Hoisting is JavaScript's default behavior of moving declarations to the top.(geeksforgeeks)
 //but above statement is wrong.
 
+//MDN
 // JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of functions, variables, classes, or imports to the top of their scope, prior to execution of the code.
 //appears-दिसते,vatane (move hoty as vattay)
-//beacuse memory create hote function variable chi tyamule te easyly call kru shakte.
+//beacuse startinglach memory create hote function ,variable chi tyamule te easyly call kru shakte.
 
 // 1.var
 //not any error
@@ -77,7 +79,7 @@ function declaration(){
 }
 
 // variableExpression();  //Uncaught TypeError: variableExpression is not a function
-//beacuse variableExpression is stored undefined in global
+//beacuse variableExpression is stored undefined in global.Its treat as variable
 //function defination
 // function expression
 var variableExpression=function(){           //anonymous function
@@ -85,7 +87,7 @@ var variableExpression=function(){           //anonymous function
 }
 
 
-// -----------------------local and global scope--------------------------------
+// -------------------local and global scope----------------------------
 
 // debugger; 
 //script means global
@@ -93,7 +95,7 @@ let scriptletVariable=300;  //local   //script
 const scriptConstVariable=900;  //local  //script
 var globalWindowVariable=200;   //global //Global //window
 
-// 'use strict' //then below variable gives error
+// 'use strict' //add this line on top->then below variable gives error
 binaDataTypeKaVariable=100;  //100 //global //window //but its wrong to declaration
 
 console.log("window.globalWindowVariable",window.globalWindowVariable)
@@ -101,7 +103,7 @@ console.log("binaDataTypeKaVariable",binaDataTypeKaVariable)
 
 
 
-// ----------------------------------laxical scope and block scop-----------------
+// ----------------------laxical scope and block scope-----------------
 
 parent();
 function parent(){
@@ -118,9 +120,9 @@ function parent(){
     child()
 }
 
-// --------------------High order function and callbacks in javascript--------
+// -------------High order function and callbacks in javascript--------
 
-//High order function
+//High order function(function accept another function)
 function AcceptFun(getFun){
     getFun();
 }
@@ -133,13 +135,13 @@ function passFun(){
 AcceptFun(passFun)
 
 
-// ----------------------------setTimeout and setInterval----------------------------
+// ----------------setTimeout and setInterval----------------------------
 
 //setTimeout only call once
 const storeReturnValue=setTimeout("console.log(true)",1000)  //true
-console.log("storeReturnValue",storeReturnValue);  //any number printed //1,2,etc
+console.log("storeReturnValue",storeReturnValue); //any number printed //1,2,etc
 
-clearTimeout(storeReturnValue);  //not called 138 line
+clearTimeout(storeReturnValue);  //not called storeReturnValue
 
 //high orderd function 
 const timer=setTimeout(otherFun,1000);
@@ -153,7 +155,7 @@ clearTimeout(timer);//then not call function
 const storeReturnData=setInterval("console.log(true)",1000) //Its calling every 1000 sec
 clearInterval(storeReturnData)//now it stop calling
 
-console.log("heeeeeeeeellllllllllllloooooooooo"); //before setTimeOut line executed beacuse its not going directly in call stack..its going first Web Apis->callBack Queue->call stack
+console.log("heeeeeeeeellllllllllllloooooooooo"); //before setTimeOut and setInterval this line is executed beacuse setTimeout and setInterval is not going directly in call stack..its going first Web Apis->callBack Queue->call stack
 
 
 //we can pass as argument also but its deprecate (no use recommended)
@@ -240,7 +242,7 @@ const sum=(sum)=>sum*sum;      //Implicitly return
 // },1000)
 
 
-// -----------------------for of vs for in javascript---------------------------
+// ----------------for of vs for in javascript---------------------------
 
 // for of  - using for array iterate
 // for in  - using for object iterate
@@ -280,7 +282,7 @@ const arr=fruits.forEach((fruit)=>{
 console.log("fruit",arr); //undefined
 
 
-// ---------------------------map,filter,reduce---------------------------------
+// ------------------map,filter,reduce---------------------------------
 
 //map
 const myArray=["Nikita","Santosh","Vaishali","Omkar"];
@@ -314,13 +316,13 @@ console.log("--filterArray--",filterArray);
 
 
 //reduce
+//accumlator indicate first value of array
 const myNumbers=[2,3,4]
 const reduceArray=myNumbers.reduce((accumlator,item,index,array)=>{
     console.log(accumlator); //0,2,3,4
     return accumlator+item;
-},0);
+},0);//accumlator is stored 1st value of array(2) otherwise store our (0) variable
 
-//accumlator is stored 1 value of array(2) otherwise store our (0) variable
 console.log("--reduceArray--",reduceArray); 
 
 
