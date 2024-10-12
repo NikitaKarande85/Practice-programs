@@ -1,0 +1,40 @@
+Ashish Take pull and follow below steps for react native setup:
+
+required versions-
+
+javac -versions
+javac 17.0.10
+
+node -v 
+v20.12.0
+
+npm -v
+10.5.0
+
+choco --version
+2.2.2
+
+echo %ANDROID_HOME%
+C:\Users\dell\AppData\Local\Android\Sdk
+
+echo %JAVA_HOME%
+C:\Program Files\Microsoft\jdk-17.0.10.7-hotspot\
+
+
+Open android studio and click file->open->go to jso app as per your path->app->click on android folder
+It will be automatically installed all dependencies in your laptop.Please don't do hurry to run an application whenever all dependencies are properly installed then you can run application.
+
+
+Application start command is-
+npm start android
+
+Please follow given steps to open debugger -
+
+chrome://inspect
+Open dedicated DevTools for Node  (Click on that)
+Add your port (e.g - 8081)
+If we want to see network tab just press ( Ctrl + Shift + J )
+
+
+
+

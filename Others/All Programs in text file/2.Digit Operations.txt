@@ -1,0 +1,170 @@
+///Digit operations
+#include<stdio.h>
+int list_main()
+{
+    int choice=0;
+    printf("\n\n\n\t\tDigit operations\n");
+    printf("\t*******************************\n");
+    printf("\t1.Count Digit.\n");
+    printf("\t2.Addition Digits.\n");
+    printf("\t3.Display largest digit.\n");
+    printf("\t4.Display smallest digit.\n");
+    printf("\t5.replace.\n");
+    printf("\t6.Reverse Digits.\n");
+    printf("\t0.Exit:\n");
+    printf("\t********************************\n\n");
+    printf("\tEnter your choice:");
+    scanf("%d",&choice);
+    return(choice);
+}
+int main()
+{
+   while(1)
+   {
+       switch(list_main())
+        {
+              case 1:
+                  CountDigit();
+                break;
+              case 2:
+                  AdditionDigit();
+                break;
+              case 3:
+                  DispLargest();
+                break;
+              case 4:
+                  DispSmall();
+                break;
+              case 5:
+                  ReplaceDigit();
+                break;
+              case 6:
+                  ReverseDigit();
+                break;
+              case 0:
+                  printf("\n\tThanks\n");
+                exit(0);
+              default:
+                printf("\n\tPlzz.. enter the valid choice\n\n");
+        }
+    }
+}
+void CountDigit()
+{
+    int iNo=0,iCopy=0,iCount=0,iRem=0;
+    printf("Enter the number:");
+    scanf("%d",&iNo);
+
+    iCopy=iNo;
+
+    while(iCopy!=0)
+    {
+        iRem=iCopy%10;
+        iCount++;
+        iCopy=iCopy/10;
+    }
+    printf("Your digit count is:%d",iCount);
+}
+void AdditionDigit()
+{
+    int iNo=0,iCopy=0,iAns=0,iRem=0;
+    printf("Enter the number:");
+    scanf("%d",&iNo);
+
+    iCopy=iNo;
+
+    while(iCopy!=0)
+    {
+        iRem=iCopy%10;
+        iAns=iAns+iRem;
+        iCopy=iCopy/10;
+    }
+    printf("Your digit addition is:%d",iAns);
+}
+void DispLargest()
+{
+    int iNo=0,iCopy=0,iRem=0,iMax=0;
+    printf("Enter the number:");
+    scanf("%d",&iNo);
+
+    iCopy=iNo;
+
+    while(iCopy!=0)
+    {
+        iRem=iCopy%10;
+         if(iMax<iRem)
+         {
+             iMax=iRem;
+         }
+        iCopy=iCopy/10;
+    }
+    printf("Your number in largest digit is:%d",iMax);
+}
+void DispSmall()
+{
+    int iNo=0,iCopy=0,iRem=0,iMin=0;
+    printf("Enter the number:");
+    scanf("%d",&iNo);
+
+    iCopy=iNo;
+    iMin=iNo;
+    while(iCopy!=0)
+    {
+        iRem=iCopy%10;
+         if(iMin>iRem)
+         {
+             iMin=iRem;
+         }
+        iCopy=iCopy/10;
+    }
+    printf("Your number in Smallest digit is:%d",iMin);
+}
+void ReplaceDigit()
+{
+    int iNo=0,iCopy=0,iRem=0,iDigit=0,iRepl=0,iAns=0,iRev=0,iCopy2=0,iRem2=0;
+    printf("Enter the number:");               ///1234
+    scanf("%d",&iNo);
+
+    printf("Which element is replace:");       ///2
+    scanf("%d",&iDigit);
+
+    printf("Enter replace digit:");            ///6
+    scanf("%d",&iRepl);
+
+    iCopy=iNo;
+    while(iCopy!=0)
+    {
+        iRem=iCopy%10;
+         if(iDigit==iRem)
+         {
+             iRem=iRepl;
+         }
+         iRev=iRev*10+iRem;
+        iCopy=iCopy/10;
+    }
+
+    iCopy2=iRev;
+
+    while(iCopy2!=0)    ///reverse
+    {
+        iRem2=iCopy2%10;
+        printf("%d",iRem2);
+        iCopy2=iCopy2/10;
+    }
+}
+void ReverseDigit()
+{
+    int iNo=0,iCopy=0,iRem=0,iRev=0;
+    printf("Enter the number:");
+    scanf("%d",&iNo);
+
+    iCopy=iNo;
+
+    while(iCopy!=0)
+    {
+        iRem=iCopy%10;
+        iRev=iRev*10+iRem;
+        iCopy=iCopy/10;
+    }
+    printf("Your reverse number is:%d",iRev);
+}

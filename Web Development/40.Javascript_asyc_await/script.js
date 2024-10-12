@@ -14,3 +14,5 @@ async function makeAsyncRequest(){
 makeAsyncRequest().then((mydata)=>{
     console.log("mydata",mydata);
 })
+
+//async keyword return bydefault promise

@@ -1,0 +1,32 @@
+Plesk shows 404 page not found Reactjs
+
+==============================================================================================
+https://stackoverflow.com/questions/65500268/plesk-shows-404-page-not-found-reactjs
+
+============================================================================================
+create web config file
+
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.webServer>
+    <httpErrors errorMode="Custom" existingResponse="Replace">
+        <remove statusCode="404" subStatusCode="-1" />
+        <error statusCode="404" path="/" responseMode="ExecuteURL" />
+    </httpErrors>
+  </system.webServer>
+</configuration> 
+
+==============================================================================================
+create a .htaccess file in the Public folder of your React App=
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+</IfModule>
+
+==================================================================================================

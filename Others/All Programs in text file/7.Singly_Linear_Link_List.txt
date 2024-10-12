@@ -1,0 +1,240 @@
+///singly linear link list
+
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int data;
+    struct node *next;
+};
+
+typedef struct node NODE;
+typedef struct node* PNODE;
+typedef struct node** PPNODE;
+
+int list_main()
+{
+    int choice=0;
+    printf("\n\t\t\tSingly link list\n");
+    printf("\t*******************************\n");
+    printf("\t1.Insert First:\n");
+    printf("\t2.Insert Last:\n");
+    printf("\t3.Delete First:\n");
+    printf("\t4.Delete Last:\n");
+    printf("\t5.Insert At Position:\n");
+    printf("\t6.Delete At Position:\n");
+    printf("\t7.Count:\n");
+    printf("\t8.Display:\n");
+    printf("\t0.Exit:\n");
+    printf("\t********************************\n\n");
+    printf("\tEnter your choice:");
+    scanf("%d",&choice);
+    return(choice);
+}
+
+
+int main()
+{
+   int no=0,iValue=0,iPos=0,iRet=0;
+   PNODE First=NULL;
+   while(1)
+   {
+       switch(list_main())
+        {
+              case 1:
+                  printf("Enter the Number:");
+                  scanf("%d",&no);
+                  InsertFirst(&First,no);
+                  Display(First);
+                break;
+              case 2:
+                  printf("Enter the Number:");
+                  scanf("%d",&no);
+                  InsertLast(&First,no);
+                  Display(First);
+                break;
+              case 3:
+                DeleteFirst(&First);
+                Display(First);
+                break;
+              case 4:
+                DeleteLast(&First);
+                Display(First);
+                break;
+              case 5:
+                  printf("Enter the Value:");
+                  scanf("%d",&iValue);
+                  printf("Enter the Position");
+                  scanf("%d",&iPos);
+                  InsertAtPos(&First,iValue,iPos);
+                  Display(First);
+                break;
+              case 6:
+                  printf("Enter the Position:");
+                  scanf("%d",&iPos);
+                  DeleteAtPos(&First,iPos);
+                  Display(First);
+                break;
+              case 7:
+                  iRet=Count(First);
+                  printf("your count is: %d",iRet);
+                break;
+              case 8:
+                  Display(First);
+                break;
+              case 0:
+                  printf("\n\tThanks\n");
+                exit(0);
+              default:
+                printf("\n\tPlzz.. enter the valid choice\n\n");
+        }
+    }
+}
+void InsertFirst(PPNODE Head, int no)
+{
+    PNODE newn = NULL;
+    newn = (PNODE)malloc(sizeof(NODE));
+    newn-> data = no;
+    newn-> next = NULL;
+
+   if(*Head==NULL)
+    {
+        *Head=newn;
+    }
+    else
+    {
+        newn->next=*Head;
+        *Head=newn;
+    }
+}
+int Display(PNODE Head)
+{
+    while(Head!=NULL)
+    {
+        printf(" %d |",Head->data);
+        Head=Head->next;
+    }
+}
+void InsertLast(PPNODE Head,int no)
+{
+    PNODE newn=NULL;
+    PNODE temp=NULL;
+    newn=(PNODE)malloc(sizeof(NODE));
+
+    newn->data=no;
+    newn->next=NULL;
+
+    if(*Head==NULL)
+    {
+        *Head=newn;
+    }
+    else
+    {
+        temp=*Head;
+        while(temp->next!=NULL)
+        {
+            temp=temp->next;
+        }
+        temp->next=newn;
+    }
+}
+int Count(PNODE head)
+{
+    int iCount=0;
+    while(head!=NULL)
+    {
+        iCount++;
+        head=head->next;
+    }
+    return iCount;
+}
+void DeleteFirst(PPNODE head)
+{
+    PNODE temp=NULL;
+    if(*head!=NULL)
+    {
+        temp=*head;
+        *head=temp->next;
+        free(temp);
+    }
+}
+void DeleteLast(PPNODE head)
+{
+    PNODE temp=*head;
+    PNODE temp2=*head;
+
+    while(temp2->next!=NULL)
+    {
+        temp2=temp2->next;
+    }
+    while(temp->next->next!=NULL)
+    {
+        temp=temp->next;
+    }
+    free(temp2);
+    temp->next=NULL;
+}
+void InsertAtPos(PPNODE head,int value,int pos)
+{
+    PNODE newn=NULL;
+    PNODE temp=*head;
+    int i=0,size=0;
+
+    size=Count(*head);
+    if(pos<1||pos>size+1)
+    {
+        return;
+    }
+    else if(pos==1)
+    {
+        InsertFirst(head,value);
+    }
+    else if(pos==size+1)
+    {
+        InsertLast(head,value);
+    }
+    else
+      {
+          newn=(PNODE)malloc(sizeof(NODE));
+          newn->data=value;
+
+         for(i=1;i<pos-1;i++)
+         {
+             temp=temp->next;
+         }
+        newn->next=temp->next;
+        temp->next=newn;
+      }
+}
+void DeleteAtPos(PPNODE head,int pos)
+{
+
+    int i=0,size=0;
+    PNODE temp=*head;
+    PNODE temp2=NULL;
+
+    size=Count(*head);
+    if(pos<1||pos>size+1)
+    {
+        return;
+    }
+    else if(pos==1)
+    {
+        DeleteFirst(head);
+    }
+    else if(pos==size+1)
+    {
+        DeleteLast(head);
+    }
+    else
+    {
+        for(i=1;i<pos-1;i++)
+        {
+            temp=temp->next;
+        }
+
+        temp2=temp->next;
+        temp->next=temp2->next;
+        free(temp2);
+    }
+}

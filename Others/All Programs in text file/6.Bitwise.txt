@@ -1,0 +1,579 @@
+**************************************Assignment 32************************************
+***************************************************************************************
+#include<stdio.h>
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+
+BOOL CheckBit(int iNo)
+{
+    int iResult=0;
+    int iMask=0X00008000;
+    int iRem=0;
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+    iResult=iNo&iMask;
+    if(iResult==iMask)
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+int main()
+{
+    int iNo=0;
+    BOOL bRet=FALSE;
+    printf("Enter the number");
+    scanf("%d",&iNo);
+
+    bRet=CheckBit(iNo);
+
+    if(bRet==TRUE)
+    {
+        printf("Your bit is ON");
+    }
+    else
+    {
+        printf("Your bit is OFF");
+    }
+    return 0;
+}
+************************************************************************************
+/*2. Write a program which checks whether
+5th & 18th bit is On or OFF.*/
+#include<stdio.h>
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+
+BOOL CheckBit(int iNo)
+{
+    int iResult=0;
+    int iMask=0X00000120;
+    int iRem=0;
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+    iResult=iNo&iMask;
+    if(iResult==iMask)
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+int main()
+{
+    int iNo=0;
+    BOOL bRet=FALSE;
+    printf("Enter the number");
+    scanf("%d",&iNo);
+
+    bRet=CheckBit(iNo);
+
+    if(bRet==TRUE)
+    {
+        printf("5 and 8 is ON");
+    }
+    else
+    {
+        printf("anyone bit is OFF");
+    }
+    return 0;
+}
+
+*********************************************************************************
+/*3. Write a program which checks whether
+7th & 15th & 21st, 28th bit is On or OFF*/
+#include<stdio.h>
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+
+BOOL CheckBit(int iNo)
+{
+    int iResult=0;
+    int iMask=0X10208080;
+    int iRem=0;
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+    iResult=iNo&iMask;
+    if(iResult==iMask)
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+int main()
+{
+    int iNo=0;
+    BOOL bRet=FALSE;
+    printf("Enter the number");
+    scanf("%d",&iNo);
+
+    bRet=CheckBit(iNo);
+
+    if(bRet==TRUE)
+    {
+        printf("7,15,21,28 is ON");
+    }
+    else
+    {
+        printf("anyone bit is OFF");
+    }
+    return 0;
+}
+**********************************************************************************
+/*4. Write a program which checks whether 7th & 8th & 9th
+bit is On or OFF*/
+#include<stdio.h>
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+
+BOOL CheckBit(int iNo)
+{
+    int iResult=0;
+    int iMask=0X00000380;
+    int iRem=0;
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+    iResult=iNo&iMask;
+    if(iResult==iMask)
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+int main()
+{
+    int iNo=0;
+    BOOL bRet=FALSE;
+    printf("Enter the number");
+    scanf("%d",&iNo);
+
+    bRet=CheckBit(iNo);
+
+    if(bRet==TRUE)
+    {
+        printf("7th & 8th & 9th is ON");
+    }
+    else
+    {
+        printf("anyone bit is OFF");
+    }
+    return 0;
+}
+****************************************************************************************
+/*5. Write a program which checks whether
+first and last bit is On or OFF.
+ First bit means bit number 1 and last
+bit means bit number 32*/
+#include<stdio.h>
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+
+BOOL CheckBit(int iNo)
+{
+    int iResult=0;
+    int iMask=0X800000001;
+    int iRem=0;
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+    iResult=iNo&iMask;
+    if(iResult==iMask)
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+int main()
+{
+    int iNo=0;
+    BOOL bRet=FALSE;
+    printf("Enter the number");
+    scanf("%d",&iNo);
+
+    bRet=CheckBit(iNo);
+
+    if(bRet==TRUE)
+    {
+        printf("1st and last bit is ON");
+    }
+    else
+    {
+        printf("anyone bit is OFF");
+    }
+    return 0;
+}
+************************************************************************************
+******************************Assignment 33**************************************
+/*1.Write a program which accept one number
+ from user and off 7th bit of that number if it is
+  on. Return modified number.
+Input :  79
+Output : 15*/
+#include<stdio.h>
+
+int CheckBit(int iNo)
+{
+    int iResult=0;
+    int iMask=0X00000001;
+    int iRem=0;
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+    iMask=iMask<<6;
+    iResult=iNo^iMask;
+    return iResult;
+}
+int main()
+{
+    int iNo=0;
+    int bRet=0;
+    printf("Enter the number");
+    scanf("%d",&iNo);
+
+    bRet=CheckBit(iNo);
+    printf("Your 7th bit is toggeled:%d",bRet);
+    return 0;
+}
+***************************************************************************
+/*2. Write a program which accept one number from user and
+off 7th and 10th bit of that number. Return modified number.
+Input :  577
+Output : 1  */
+
+#include<stdio.h>
+
+int CheckBit(int iNo)
+{
+    int iResult=0;
+    int iMask=0X00000240;
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+    iMask=iMask<<(6&9);
+    iResult=iNo^iMask;
+    return iResult;
+}
+int main()
+{
+    int iNo=0,iPos=0;
+    int iRet=0;
+    printf("Enter the number");
+    scanf("%d",&iNo);
+
+    iRet=CheckBit(iNo);
+    printf("%d",iRet);
+    return 0;
+}
+***************************************************************************************
+/*3. Write a program which accept one number from user and
+toggle 7th bit of that number. Return modified number.
+Input :  137
+Output : 201  */
+
+#include<stdio.h>
+
+int CheckBit(int iNo)
+{
+    int iResult=0;
+    int iMask=0X00000001;
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+    iMask=iMask<<6;
+    iResult=iNo^iMask;
+    return iResult;
+}
+int main()
+{
+    int iNo=0,iPos=0;
+    int iRet=0;
+    printf("Enter the number");
+    scanf("%d",&iNo);
+
+    iRet=CheckBit(iNo);
+    printf("%d",iRet);
+    return 0;
+}
+************************************************************************************
+/*4. Write a program which accept one number from user and
+toggle 7th and 10th bit of that number. Return modified number.
+Input :  137
+Output : 713  */
+
+#include<stdio.h>
+
+int CheckBit(int iNo)
+{
+    int iResult=0;
+    int iMask=0X00000240;
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+    iMask=iMask<<(6&9);
+    iResult=iNo^iMask;
+    return iResult;
+}
+int main()
+{
+    int iNo=0,iPos=0;
+    int iRet=0;
+    printf("Enter the number");
+    scanf("%d",&iNo);
+
+    iRet=CheckBit(iNo);
+    printf("%d",iRet);
+    return 0;
+}
+*****************************************************************************************
+/*5. Write a program which accept one number from user and on
+its first 4 bits. Return modified number.
+Input :  73
+Output : 79   */
+
+#include<stdio.h>
+
+int CheckBit(int iNo)
+{
+    int iResult=0;
+    int iMask=0X0000000F;
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+    iResult=iNo|iMask;
+    return iResult;
+}
+int main()
+{
+    int iNo=0,iPos=0;
+    int iRet=0;
+    printf("Enter the number");
+    scanf("%d",&iNo);
+
+    iRet=CheckBit(iNo);
+    printf("%d",iRet);
+    return 0;
+}
+**************************************************************************************
+*********************************Assignment 34**************************************
+/*1.Write a program which accept one number and position
+from user and check whether bit at that position is on or off.
+ If bit is one return TURE otherwise return FALSE.
+
+Input :  10 2
+Output :  TRUE  */
+
+#include<stdio.h>
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+
+BOOL CheckBit(int iNo,int iPos)
+{
+    int iResult=0;
+    int iMask=0X00000001;
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+    iMask=iMask<<(iPos-1);
+    iResult=iNo&iMask;
+    if(iMask==iResult)
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+int main()
+{
+    int iNo=0,iPos=0;
+    BOOL bRet=FALSE;
+    printf("Enter the number");
+    scanf("%d",&iNo);
+
+    printf("Enter the number");
+    scanf("%d",&iPos);
+
+    bRet=CheckBit(iNo,iPos);
+    if(bRet==TRUE)
+    {
+        printf("Bit is ON");
+    }
+    else
+    {
+        printf("Bit is OFF");
+    }
+    return 0;
+}
+***************************************************************************************************
+/*2. Write a program which accept one number and position from user
+ and off that bit. Return modified number.
+Input :  10 2
+Output :  8   */
+
+#include<stdio.h>
+
+int CheckBit(int iNo,int iPos)
+{
+    int iResult=0;
+    int iMask=0X00000001;
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+    iMask=iMask<<(iPos-1);
+    iResult=iNo^iMask;
+    return iResult;
+}
+int main()
+{
+    int iNo=0,iPos=0;
+    int iRet=0;
+    printf("Enter the number");
+    scanf("%d",&iNo);
+
+    printf("Enter the number");
+    scanf("%d",&iPos);
+
+    iRet=CheckBit(iNo,iPos);
+    printf("%d",iRet);
+    return 0;
+}
+**********************************************************************************************************
+/*3. Write a program which accept one number and position from user
+ and on that bit. Return modified number.
+
+Input :  10 3
+Output :  14    */
+
+#include<stdio.h>
+
+int CheckBit(int iNo,int iPos)
+{
+    int iResult=0;
+    int iMask=0X00000001;
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+    iMask=iMask<<(iPos-1);
+    iResult=iNo|iMask;
+    return iResult;
+}
+int main()
+{
+    int iNo=0,iPos=0;
+    int iRet=0;
+    printf("Enter the number");
+    scanf("%d",&iNo);
+
+    printf("Enter the number");
+    scanf("%d",&iPos);
+
+    iRet=CheckBit(iNo,iPos);
+    printf("%d",iRet);
+    return 0;
+}
+***************************************************************************************************
+/*4. Write a program which accept one number and position from user and
+toggle that bit. Return modified number.
+
+Input :  10 3
+Output :  14   */
+
+#include<stdio.h>
+
+int CheckBit(int iNo,int iPos)
+{
+    int iResult=0;
+    int iMask=0X00000001;
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+    iMask=iMask<<(iPos-1);
+    iResult=iNo|iMask;
+    return iResult;
+}
+int main()
+{
+    int iNo=0,iPos=0;
+    int iRet=0;
+    printf("Enter the number");
+    scanf("%d",&iNo);
+
+    printf("Enter the number");
+    scanf("%d",&iPos);
+
+    iRet=CheckBit(iNo,iPos);
+    printf("%d",iRet);
+    return 0;
+}
+**********************************************************************************************************
+/*5. Write a program which accept one number from user and toggle contents of
+first and last nibble of the number. Return modified number.
+(Nibble is a group of four bits)   */
+
+#include<stdio.h>
+
+int CheckBit(int iNo)
+{
+    int iResult=0;
+
+    long int iMask=0XF000000F;
+
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+
+    iResult=iNo^~iMask;
+    return iResult;
+}
+int main()
+{
+    int iNo=0;
+    int iRet=0;
+    printf("Enter the number");
+    scanf("%d",&iNo);
+
+    iRet=CheckBit(iNo);
+    printf("%d",iRet);
+    return 0;
+}
+*****************************************************************************************************

@@ -1,0 +1,1355 @@
+******************************************************************************************
+/*
+1. Accept N numbers from user and return difference between
+summation of even elements and summation of odd elements.
+Input :  N :   6
+  Elements : 85 66 3 80 93 88
+Output : 53 (234 - 181)
+*/
+#include<stdio.h>
+int Difference(int arr[],int iSize)
+{
+  int iCnt=0;
+  int iAdd1=0,iAdd2=0,iAns=0;
+  for(iCnt=0;iCnt<iSize;iCnt++)
+  {
+      if(arr[iCnt]%2==0)
+      {
+          iAdd1=iAdd1+arr[iCnt];
+      }
+      else
+      {
+          iAdd2=iAdd2+arr[iCnt];
+      }
+  }
+  iAns=(iAdd1-iAdd2);
+  return iAns;
+}
+int main()
+{
+     int iValue=0;
+     int iRet=0;
+     int *ptr=NULL;
+     int iCnt=0;
+     printf("Enter your N number:");
+     scanf("%d",&iValue);
+
+     ptr=(int*)malloc(4*iValue);
+     if(ptr==NULL)
+     {
+         printf("Memory not allocated");
+         return -1;
+     }
+     else
+     {
+         printf("Memory allocated\n");
+     }
+     printf("Enter the number:");
+     for(iCnt=0;iCnt<iValue;iCnt++)
+     {
+         scanf("%d",&ptr[iCnt]);
+     }
+     iRet=Difference(ptr,iValue);
+     printf("Your summation is %d",iRet);
+     return 0;
+}
+***************************************************************************************
+/*
+2. Accept N numbers from user and display all such elements which are divisible by 5.
+Input :  N :   6
+  Elements : 85 66 3 80 93 88
+Output : 85 80
+*/
+#include<stdio.h>
+void Display(int arr[],int iSize)
+{
+  int iCnt=0;
+  int iAdd1=0,iAdd2=0,iAns=0;
+  for(iCnt=0;iCnt<iSize;iCnt++)
+  {
+      if(arr[iCnt]%5==0)
+      {
+          printf("%d ",arr[iCnt]);
+      }
+  }
+}
+int main()
+{
+
+     int iValue=0;
+     int *ptr=NULL;
+     int iCnt=0;
+     printf("Enter N value:");
+     scanf("%d",&iValue);
+
+     ptr=(int*)malloc(4*iValue);
+
+     printf("Enter the numbers:");
+
+     for(iCnt=0;iCnt<iValue;iCnt++)
+     {
+         scanf("%d",&ptr[iCnt]);
+     }
+     Display(ptr,iValue);
+     return 0;
+}
+**************************************************************************************
+/*
+3. Accept N numbers from user and display all such elements which are even and divisible
+by 5.
+Input :  N :   6
+Elements : 85 66 3 80 93 88
+Output : 80
+*/
+#include<stdio.h>
+void Display(int arr[],int iSize)
+{
+  int iCnt=0;
+  int iAdd1=0,iAdd2=0,iAns=0;
+  for(iCnt=0;iCnt<iSize;iCnt++)
+  {
+      if(arr[iCnt]%5==0&&arr[iCnt]%2==0)
+      {
+          printf("%d ",arr[iCnt]);
+      }
+  }
+}
+int main()
+{
+
+     int iValue=0;
+     int *ptr=NULL;
+     int iCnt=0;
+     printf("Enter N value:");
+     scanf("%d",&iValue);
+
+     ptr=(int*)malloc(4*iValue);
+
+     printf("Enter the numbers:");
+
+     for(iCnt=0;iCnt<iValue;iCnt++)
+     {
+         scanf("%d",&ptr[iCnt]);
+     }
+     Display(ptr,iValue);
+     return 0;
+}
+****************************************************************************************
+/*
+4. Accept N numbers from user and display all such
+elements which are divisible by 3 and 5.
+Input :  N :   6
+Elements : 85 66 3 15 93 88
+Output : 15
+*/
+#include<stdio.h>
+void Display(int arr[],int iSize)
+{
+  int iCnt=0;
+  int iAdd1=0,iAdd2=0,iAns=0;
+  for(iCnt=0;iCnt<iSize;iCnt++)
+  {
+      if(arr[iCnt]%5==0&&arr[iCnt]%3==0)
+      {
+          printf("%d ",arr[iCnt]);
+      }
+  }
+}
+int main()
+{
+
+     int iValue=0;
+     int *ptr=NULL;
+     int iCnt=0;
+     printf("Enter N value:");
+     scanf("%d",&iValue);
+
+     ptr=(int*)malloc(4*iValue);
+
+     printf("Enter the numbers:");
+
+     for(iCnt=0;iCnt<iValue;iCnt++)
+     {
+         scanf("%d",&ptr[iCnt]);
+     }
+     Display(ptr,iValue);
+     return 0;
+}
+***************************************************************************************
+/*
+5. Accept N numbers from user and display all such elements which are multiples of 11.
+Input :  N :   6
+Elements : 85 66 3 55 93 88
+Output : 66 55 88
+*/
+#include<stdio.h>
+void Display(int arr[],int iSize)
+{
+  int iCnt=0;
+  int iAdd1=0,iAdd2=0,iAns=0;
+  for(iCnt=0;iCnt<iSize;iCnt++)
+  {
+      if(arr[iCnt]%11==0)
+      {
+          printf("%d ",arr[iCnt]);
+      }
+  }
+}
+int main()
+{
+
+     int iValue=0;
+     int *ptr=NULL;
+     int iCnt=0;
+     printf("Enter N value:");
+     scanf("%d",&iValue);
+
+     ptr=(int*)malloc(4*iValue);
+
+     printf("Enter the numbers:");
+
+     for(iCnt=0;iCnt<iValue;iCnt++)
+     {
+         scanf("%d",&ptr[iCnt]);
+     }
+     Display(ptr,iValue);
+     return 0;
+}
+*************************************************************************************
+/*
+1. Accept N numbers from user and return frequency of even numbers.
+Input :  N :   6
+Elements : 85 66 3 80 93 88
+Output : 3
+*/
+#include<stdio.h>
+int CountEven(int arr[],int iSize)
+{
+  int iCnt=0;
+  int iCount=0;
+  int iAdd1=0,iAdd2=0,iAns=0;
+  for(iCnt=0;iCnt<iSize;iCnt++)
+  {
+      if(arr[iCnt]%2==0)
+      {
+          iCount++;
+      }
+  }
+  return iCount;
+}
+int main()
+{
+     int iValue=0;
+     int *ptr=NULL;
+     int iCnt=0;
+     int iRet=0;
+     printf("Enter N value:");
+     scanf("%d",&iValue);
+
+     ptr=(int*)malloc(4*iValue);
+
+     printf("Enter the numbers:");
+
+     for(iCnt=0;iCnt<iValue;iCnt++)
+     {
+         scanf("%d",&ptr[iCnt]);
+     }
+     iRet=CountEven(ptr,iValue);
+     printf("%d",iRet);
+     return 0;
+}
+***********************************************************************************
+/*
+2. Accept N numbers from user and return difference between
+frequency of even number and odd numbers.
+Input :  N :   7
+Elements : 85 66 3 80 93 88 90
+Output : 1 (4 -3)
+*/
+#include<stdio.h>
+int Count(int arr[],int iSize)
+{
+  int iCnt=0;
+  int iCountEven=0;
+  int iCountOdd=0;
+  int iAns=0;
+  for(iCnt=0;iCnt<iSize;iCnt++)
+  {
+      if(arr[iCnt]%2==0)
+      {
+          iCountEven++;
+      }
+      else
+      {
+          iCountOdd++;
+      }
+  }
+  iAns=iCountEven-iCountOdd;
+  return iAns;
+}
+int main()
+{
+     int iValue=0;
+     int *ptr=NULL;
+     int iCnt=0;
+     int iRet=0;
+     printf("Enter N value:");
+     scanf("%d",&iValue);
+
+     ptr=(int*)malloc(4*iValue);
+
+     printf("Enter the numbers:");
+
+     for(iCnt=0;iCnt<iValue;iCnt++)
+     {
+         scanf("%d",&ptr[iCnt]);
+     }
+     iRet=Count(ptr,iValue);
+     printf("%d",iRet);
+     return 0;
+}
+*************************************************************************************
+/*
+3. Accept N numbers from user check whether that numbers contains 11 in it or not.
+Input :  N :   6
+Elements : 85 66 11 80 93 88
+Output : 11 is present
+Input :  N :   6
+Elements : 85 66 3 80 93 88
+Output : 11 is absent
+*/
+#include<stdio.h>
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+int Check(int arr[],int iSize)
+{
+  int iCnt=0;
+  for(iCnt=0;iCnt<iSize;iCnt++)
+  {
+      if(arr[iCnt]==11)
+      {
+          return TRUE;
+      }
+  }
+}
+int main()
+{
+     int iValue=0;
+     int *ptr=NULL;
+     int iCnt=0;
+     BOOL bRet = FALSE;
+     printf("Enter N value:");
+     scanf("%d",&iValue);
+
+     ptr=(int*)malloc(4*iValue);
+
+     printf("Enter the numbers:");
+
+     for(iCnt=0;iCnt<iValue;iCnt++)
+     {
+         scanf("%d",&ptr[iCnt]);
+     }
+     iRet=Check(ptr,iValue);
+     if(iRet==TRUE)
+     {
+         printf("11 is present");
+     }
+     else
+     {
+         printf("11 is absent");
+     }
+     return 0;
+}
+******************************************************************************************
+/*
+4. Accept N numbers from user and return frequency of 11 form it.
+Input :  N :   6
+  Elements : 85 66 3 15 93 88
+Output : 0
+Input :  N :   6
+  Elements : 85 11 3 15 11 111
+Output : 2
+*/
+#include<stdio.h>
+int Frequency(int arr[],int iSize)
+{
+  int iCnt=0;
+  int iCount=0;
+  for(iCnt=0;iCnt<iSize;iCnt++)
+  {
+      if(arr[iCnt]==11)
+      {
+         iCount++;
+      }
+  }
+  return iCount;
+}
+int main()
+{
+     int iValue=0;
+     int *ptr=NULL;
+     int iCnt=0;
+     int iRet=0;
+     printf("Enter N value:");
+     scanf("%d",&iValue);
+
+     ptr=(int*)malloc(4*iValue);
+
+     printf("Enter the numbers:");
+
+     for(iCnt=0;iCnt<iValue;iCnt++)
+     {
+         scanf("%d",&ptr[iCnt]);
+     }
+     iRet=Frequency(ptr,iValue);
+     printf("%d",iRet);
+     return 0;
+}
+*************************************************************************************
+/*
+5. Accept N numbers from user and accept one another number as NO ,
+return frequency of NO form it.
+ Input :  N :   6
+  NO:  66
+  Elements : 85 66 3 66 93 88
+Output : 2
+Input :  N :   6
+NO:  12
+Elements : 85 11 3 15 11 111
+Output : 0
+*/
+#include<stdio.h>
+int Frequency(int arr[],int iSize,int iNo)
+{
+  int iCnt=0;
+  int iCount=0;
+  for(iCnt=0;iCnt<iSize;iCnt++)
+  {
+      if(arr[iCnt]==iNo)
+      {
+         iCount++;
+      }
+  }
+  return iCount;
+}
+int main()
+{
+     int iValue=0,iValue2=0;
+     int *ptr=NULL;
+     int iCnt=0;
+     int iRet=0;
+     printf("Enter N value:");
+     scanf("%d",&iValue);
+
+     printf("\nEnter number to find");
+     scanf("%d",&iValue2);
+
+     ptr=(int*)malloc(4*iValue);
+
+     printf("Enter the numbers:");
+
+     for(iCnt=0;iCnt<iValue;iCnt++)
+     {
+         scanf("%d",&ptr[iCnt]);
+     }
+     iRet=Frequency(ptr,iValue,iValue2);
+     printf("%d",iRet);
+     free(ptr);
+     return 0;
+}
+******************************************************************************************
+/*1. Accept N numbers from user and accept one
+another number as NO , check whether NO is present or not.
+  Input :  N :   6
+  NO:  66
+  Elements : 85 66 3 66 93 88
+  Output : TRUE
+  Input :  N :   6
+  NO:  12
+  Elements : 85 11 3 15 11 111
+  Output : FALSE   */
+#include<stdio.h>
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+BOOL Display(int arr[],int iSize,int iValue)
+{
+    int iCnt=0;
+    for(iCnt=1;iCnt<iSize;iCnt++)
+    {
+        if(arr[iCnt]==iValue)
+        {
+            return TRUE;
+        }
+        else
+        {
+            return FALSE;
+        }
+    }
+}
+int main()
+{
+    int iSize=0,iValue=0;
+     BOOL iRet=FALSE;
+    int *ptr=NULL;
+    int iCnt=0;
+
+    printf("Enter the Size:");
+    scanf("%d",&iSize);
+
+    printf("\nEnter the value:");
+    scanf("%d",&iValue);
+
+    printf("\nEnter the Numbers:");
+
+    ptr=(int*)malloc(sizeof(int)*iSize);
+
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        scanf("%d",&ptr[iCnt]);
+    }
+    iRet=Display(ptr,iSize,iValue);
+
+    if(iRet==TRUE)
+    {
+        printf("Number is present");
+    }
+    else
+    {
+        printf("Number is not present");
+    }
+    free(ptr);
+    return 0;
+}
+***************************************************************************************
+/*2. Accept N numbers from user and accept one another
+ number as NO , return index of first occurrence of that NO.
+
+  Input :  N :   6
+  NO:  66
+  Elements : 85 66 3 66 93 88
+  Output : 1
+
+  Input :  N :   6
+  NO:  12
+  Elements : 85 11 3 15 11 111
+  Output : -1
+*/
+#include<stdio.h>
+int Display(int arr[],int iSize,int iValue)
+{
+    int iCnt=0;
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        if(arr[iCnt]==iValue)
+        {
+            return iCnt;
+        }
+    }
+    return -1;
+}
+int main()
+{
+    int iSize=0,iValue=0;
+    int iRet=0;
+    int *ptr=NULL;
+    int iCnt=0;
+
+    printf("Enter the Size:");
+    scanf("%d",&iSize);
+
+    printf("\nEnter the value:");
+    scanf("%d",&iValue);
+
+    printf("\nEnter the Numbers:");
+
+    ptr=(int*)malloc(sizeof(int)*iSize);
+
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        scanf("%d",&ptr[iCnt]);
+    }
+    iRet=Display(ptr,iSize,iValue);
+    printf("Your index is:%d",iRet);
+    free(ptr);
+    return 0;
+}
+*****************************************************************************************
+/*3. Accept N numbers from user and accept one another
+ number as NO , return index of last occurrence of that NO.
+
+  Input :  N :   6
+  NO:  66
+  Elements : 85 66 3 66 93 88
+  Output : 3
+
+  Input :  N :   6
+  NO:  93
+  Elements : 85 66 3 66 93 88
+  Output : 4
+
+  Input :  N :   6
+  NO:  12
+  Elements : 85 11 3 15 11 111
+  Output : -1
+*/
+#include<stdio.h>
+int Display(int arr[],int iSize,int iValue)
+{
+    int iCnt=0;
+    int iAns=0;
+    int iAns1=0;
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        if(arr[iCnt]==iValue)
+        {
+            iAns=iCnt;
+        }
+        else
+        {
+            iAns1=-1;
+        }
+
+    }
+    if(iAns==0)
+    {
+        return iAns1;
+    }
+    else
+    {
+        return iAns;
+    }
+}
+int main()
+{
+    int iSize=0,iValue=0;
+    int iRet=0;
+    int *ptr=NULL;
+    int iCnt=0;
+
+    printf("Enter the Size:");
+    scanf("%d",&iSize);
+
+    printf("\nEnter the value:");
+    scanf("%d",&iValue);
+
+    printf("\nEnter the Numbers:");
+
+    ptr=(int*)malloc(sizeof(int)*iSize);
+
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        scanf("%d",&ptr[iCnt]);
+    }
+    iRet=Display(ptr,iSize,iValue);
+    printf("Your index is:%d",iRet);
+    free(ptr);
+    return 0;
+}
+****************************************************************************************
+/*4. Accept N numbers from user and accept Range,
+ Display all elements from that range
+  Input :
+  N :   6
+  Start: 60
+  End :  90
+  Elements : 85 66 3 76 93 88
+  Output : 85 66 76 88
+*/
+#include<stdio.h>
+void Display(int arr[],int iSize,int iEnd,int iStart)
+{
+    int iCnt=0;
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        if(arr[iCnt]>iStart&&arr[iCnt]<iEnd)
+        {
+            printf("%d ",arr[iCnt]);
+        }
+    }
+}
+int main()
+{
+    int iSize=0,iEnd=0,iStart=0;
+    int *ptr=NULL;
+    int iCnt=0;
+
+    printf("Enter the Size:");
+    scanf("%d",&iSize);
+
+    printf("\nEnter the value start:");
+    scanf("%d",&iStart);
+
+    printf("\nEnter the value end:");
+    scanf("%d",&iEnd);
+
+    printf("\nEnter the Numbers:");
+
+    ptr=(int*)malloc(sizeof(int)*iSize);
+
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        scanf("%d",&ptr[iCnt]);
+    }
+    Display(ptr,iSize,iEnd,iStart);
+    free(ptr);
+    return 0;
+}
+******************************************************************************************
+/*5. Accept N numbers from user and return product
+of all odd elements.
+Input :  N :   6
+Elements : 15 66 3 70 10 88
+Output : 45
+
+Input :  N :   6
+Elements : 44 66 72 70 10 88
+Output : 0
+*/
+#include<stdio.h>
+int Display(int arr[],int iSize)
+{
+    int iCnt=0;
+    int iProduct=1;
+    int iNo=0;
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        if(arr[iCnt]%2!=0)
+        {
+            iProduct=iProduct*arr[iCnt];
+        }
+    }
+    if(iProduct>1)
+    {
+        return iProduct;
+    }
+    else
+    {
+        return iNo;
+    }
+}
+int main()
+{
+    int iSize=0;
+    int iRet=0;
+    int *ptr=NULL;
+    int iCnt=0;
+
+    printf("Enter the Size:");
+    scanf("%d",&iSize);
+
+    printf("\nEnter the Numbers:");
+
+    ptr=(int*)malloc(sizeof(int)*iSize);
+
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        scanf("%d",&ptr[iCnt]);
+    }
+    iRet=Display(ptr,iSize);
+    printf("Your product of all elements:%d",iRet);
+    free(ptr);
+    return 0;
+}
+
+***************************************************************************************
+/*1. Accept N numbers from user and return the largest number.
+Input :  N :   6
+Elements : 85 66 3 66 93 88
+Output : 93
+*/
+#include<stdio.h>
+int Display(int arr[],int iSize)
+{
+    int iCnt=0;
+    int iNo=0;
+    int iMax=arr[0];
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        iNo=arr[iCnt];
+        if(iNo>iMax)
+        {
+            iMax=iNo;
+        }
+    }
+    return iMax;
+}
+int main()
+{
+    int iSize=0;
+    int iRet=0;
+    int *ptr=NULL;
+    int iCnt=0;
+
+    printf("Enter the Size:");
+    scanf("%d",&iSize);
+
+    printf("\nEnter the Numbers:");
+
+    ptr=(int*)malloc(sizeof(int)*iSize);
+
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        scanf("%d",&ptr[iCnt]);
+    }
+    iRet=Display(ptr,iSize);
+    printf("largest number:%d",iRet);
+    free(ptr);
+    return 0;
+}
+***************************************************************************************
+/*2. Accept N numbers from user and return the smallest number.
+Input :  N :   6
+  Elements : 85 66 3 66 93 88
+Output : 3
+*/
+#include<stdio.h>
+int Display(int arr[],int iSize)
+{
+    int iCnt=0;
+    int iNo=0;
+    int iMin=arr[0];
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        iNo=arr[iCnt];
+        if(iNo<iMin)
+        {
+            iMin=iNo;
+        }
+    }
+    return iMin;
+}
+int main()
+{
+    int iSize=0;
+    int iRet=0;
+    int *ptr=NULL;
+    int iCnt=0;
+
+    printf("Enter the Size:");
+    scanf("%d",&iSize);
+
+    printf("\nEnter the Numbers:");
+
+    ptr=(int*)malloc(sizeof(int)*iSize);
+
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        scanf("%d",&ptr[iCnt]);
+    }
+    iRet=Display(ptr,iSize);
+    printf("Smallest number:%d",iRet);
+    free(ptr);
+    return 0;
+}
+*****************************************************************************************
+/*3. Accept N numbers from user and return the difference
+ between largest and smallest number.
+Input :  N :   6
+  Elements : 85 66 3 66 93 88
+Output : 90 (93 -3)
+*/
+#include<stdio.h>
+int Display(int arr[],int iSize)
+{
+    int iCnt=0;
+    int iNo=0;
+    int iMax=0;
+    int iMin=arr[0];
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        iNo=arr[iCnt];
+        if(iNo<iMin)
+        {
+            iMin=iNo;
+        }
+         if(iNo>iMax)
+        {
+            iMax=iNo;
+        }
+    }
+    return(iMax-iMin);
+}
+int main()
+{
+    int iSize=0;
+    int iRet=0;
+    int *ptr=NULL;
+    int iCnt=0;
+
+    printf("Enter the Size:");
+    scanf("%d",&iSize);
+
+    printf("\nEnter the Numbers:");
+
+    ptr=(int*)malloc(sizeof(int)*iSize);
+
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        scanf("%d",&ptr[iCnt]);
+    }
+    iRet=Display(ptr,iSize);
+    printf("Largest and Smallest Division is:%d",iRet);
+    free(ptr);
+    return 0;
+}
+**************************************************************************************
+/*4. Accept N numbers from user and display all such numbers which contains  3 digits in it.
+Input :  N :   6
+Elements : 8225  665 3 76 953 858
+Output : 665 953 858
+*/
+#include<stdio.h>
+int Display(int arr[],int iSize)
+{
+    int iCnt=0;
+    int iNo=0;
+    int iCount=0,iAns=0;
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        iNo=arr[iCnt];
+        while(iNo!=0)
+        {
+            iAns=iNo%10;
+            iCount++;
+            iNo=iNo/10;
+        }
+        if(iCount==3)
+        {
+            printf("%d ",arr[iCnt]);
+        }
+        iAns=0;
+        iCount=0;
+    }
+}
+int main()
+{
+    int iSize=0;
+    int *ptr=NULL;
+    int iCnt=0;
+
+    printf("Enter the Size:");
+    scanf("%d",&iSize);
+
+    printf("\nEnter the Numbers:");
+
+    ptr=(int*)malloc(sizeof(int)*iSize);
+
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        scanf("%d",&ptr[iCnt]);
+    }
+    Display(ptr,iSize);
+    free(ptr);
+    return 0;
+}
+*************************************************************************************
+/*5. Accept N numbers from user and display summation of digits of each number.
+Input :  N :   6
+Elements : 8225  665 3 76 953 858
+Output : 17 17 3 13 17 21
+*/
+#include<stdio.h>
+int Display(int arr[],int iSize)
+{
+    int iCnt=0;
+    int iNo=0;
+    int iSum=0,iAns=0;
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        iNo=arr[iCnt];
+        while(iNo!=0)
+        {
+            iAns=iNo%10;
+            iSum=iSum+iAns;
+            iNo=iNo/10;
+        }
+        printf("%d ",iSum);
+        iAns=0;
+        iSum=0;
+    }
+}
+int main()
+{
+    int iSize=0;
+    int *ptr=NULL;
+    int iCnt=0;
+
+    printf("Enter the Size:");
+    scanf("%d",&iSize);
+
+    printf("\nEnter the Numbers:");
+
+    ptr=(int*)malloc(sizeof(int)*iSize);
+
+    for(iCnt=0;iCnt<iSize;iCnt++)
+    {
+        scanf("%d",&ptr[iCnt]);
+    }
+    Display(ptr,iSize);
+    free(ptr);
+    return 0;
+}
+********************************************************************************
+/*1. Accept Character from user and check whether it is alphabet or not (A-Z a-z).
+Input :  F
+Output :  TRUE
+Input :  &
+Output :  FALSE
+*/
+#include<stdio.h>
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+BOOL ChkAlpha(char cValue)
+{
+    if(cValue>='A'&&cValue<='Z'||cValue>='a'&&cValue<='z')
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+int main()
+{
+    char cValue='\0';
+    BOOL bRet=FALSE;
+    printf("Enter the character:");
+    scanf("%c",&cValue);
+    bRet=ChkAlpha(cValue);
+    if(bRet==TRUE)
+    {
+        printf("It is a character");
+    }
+    else
+    {
+        printf("It is not character");
+    }
+}
+***********************************************************************************
+/*2. Accept Character from user and check whether it is capital or not (A-Z).
+Input :  F
+Output :  TRUE
+Input :  d
+Output :  FALSE
+*/
+#include<stdio.h>
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+BOOL ChkAlpha(char cValue)
+{
+    if(cValue>='A'&&cValue<='Z')
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+int main()
+{
+    char cValue='\0';
+    BOOL bRet=FALSE;
+    printf("Enter the character:");
+    scanf("%c",&cValue);
+    bRet=ChkAlpha(cValue);
+    if(bRet==TRUE)
+    {
+        printf("It is a Capital");
+    }
+    else
+    {
+        printf("It is not Capital");
+    }
+}
+************************************************************************************
+/*3. Accept Character from user and check whether it is digit or not (0-9).
+Input :  7
+Output :  TRUE
+Input :  d
+Output :  FALSE
+*/
+#include<stdio.h>
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+BOOL ChkAlpha(char cValue)
+{
+    if(cValue>='1'&&cValue<='9')
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+int main()
+{
+    char cValue='\0';
+    BOOL bRet=FALSE;
+    printf("Enter the character:");
+    scanf("%c",&cValue);
+    bRet=ChkAlpha(cValue);
+    if(bRet==TRUE)
+    {
+        printf("It is a Digit");
+    }
+    else
+    {
+        printf("It is not Digit");
+    }
+}
+**************************************************************************************
+/*4. Accept Character from user and check whether it is
+small case or not (a-z).
+Input :  g
+Output :  TRUE
+Input :  D
+Output :  FALSE
+*/
+#include<stdio.h>
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+BOOL ChkAlpha(char cValue)
+{
+    if(cValue>='a'&&cValue<='z')
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+int main()
+{
+    char cValue='\0';
+    BOOL bRet=FALSE;
+    printf("Enter the character:");
+    scanf("%c",&cValue);
+    bRet=ChkAlpha(cValue);
+    if(bRet==TRUE)
+    {
+        printf("It is a small case character");
+    }
+    else
+    {
+        printf("It is not small case character");
+    }
+}
+***************************************************************************************
+/*5. Accept division of student from user and depends on the
+ division display exam timing. There are 4 divisions in school
+ as A,B,C,D. Exam of division A at 7 AM, B at 8.30 AM,
+ C at 9.20 AM and D at 10.30 AM. (Application should be case insensitive)
+Input :  C
+Output :  Your exam at 9.20 AM
+Input :  d
+Output :  Your exam at 10.30 AM
+*/
+#include<stdio.h>
+void ChkAlpha(char cValue)
+{
+    switch(cValue)
+    {
+         case'a':
+         case'A':
+            printf("7 am");
+            break;
+         case'b':
+         case'B':
+            printf("8.30 am");
+            break;
+         case'c':
+         case'C':
+            printf("9.20 am");
+            break;
+         case'd':
+         case'D':
+            printf("10.30 am");
+            break;
+         default:
+            printf("You are wrong");
+   }
+}
+int main()
+{
+    char cValue='\0';
+    printf("Enter the character:");
+    scanf("%c",&cValue);
+    ChkAlpha(cValue);
+}
+*************************************************************************************
+/*1. Write a program which displays ASCII table.
+ Table contains symbol, Decimal, Hexadecimal and Octal
+ representation of every member from 0 to 255.
+*/
+#include<stdio.h>
+int main()
+{
+    DisplayASCII();
+    return 0;
+}
+void DisplayASCII()
+{
+    int i;
+    for(i=1;i<255;i++)
+    {
+        printf("%d %h %c\n",i,i,i);
+    }
+}
+***************************************************************************************
+/*2. Accept character from user. If character is small display
+its corresponding capital character, and if it small then display
+its corresponding capital. In other cases display as it is.
+Input :  Q
+Output : q
+Input :  m
+Output : M
+Input :  4
+Output : 4
+Input :  %
+Output : %
+*/
+#include<stdio.h>
+void Display(char cValue)
+{
+    if(cValue>='A'&&cValue<='Z')
+    {
+        printf("%c",cValue+32);
+    }
+    else if(cValue>='a'&&cValue<='z')
+    {
+        printf("%c",cValue-32);
+    }
+    else if(cValue>='1'&&cValue<='9')
+    {
+        printf("%c",cValue);
+    }
+    else
+    {
+        printf("%c",cValue);
+    }
+}
+int main()
+{
+    char cValue='\0';
+    printf("Enter the character:");
+    scanf("%c",&cValue);
+    Display(cValue);
+    return 0;
+}
+*************************************************************************************
+/*3. Accept character from user. If it is capital then
+display all the characters from the input characters till Z.
+If input character is small then print all the characters in
+reverse order till a. In other cases return directly.
+Input :  Q
+Output : Q R S T U V W X Y Z
+Input :  m
+Output : m l k j i h g f e d c b a
+Input :  8
+Output :
+*/
+#include<stdio.h>
+void Display(char cValue)
+{
+  if(cValue>='A'&&cValue<='Z')
+  {
+      while(cValue<='Z')
+      {
+          printf("%c ",cValue);
+          cValue++;
+      }
+   }
+   if(cValue>='a'&&cValue<='z')
+   {
+      while(cValue>='a')
+      {
+          printf("%c ",cValue);
+          cValue--;
+      }
+   }
+}
+int main()
+{
+    char cValue='\0';
+    printf("Enter the character:");
+    scanf("%c",&cValue);
+    Display(cValue);
+    return 0;
+}
+
+************************************************************************************
+/*4. Accept Character from user and check whether it is special symbol or not (!, @, #, $, %, ^, &, *).
+Input :  %
+Output :  TRUE
+Input :  d
+Output :  FALSE
+*/
+#include<stdio.h>
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+BOOL Display(char cValue)
+{
+  if(cValue>='A'&&cValue<='Z'||cValue>='a'&&cValue<='z'||cValue>='1'&&cValue<='9')
+  {
+      return TRUE;
+  }
+  else
+  {
+      return FALSE;
+  }
+}
+int main()
+{
+    char cValue='\0';
+    BOOL bRet=FALSE;
+    printf("Enter the character:");
+    scanf("%c",&cValue);
+    bRet=Display(cValue);
+    if(bRet==TRUE)
+    {
+        printf("It is not special Character");
+    }
+    else
+    {
+        printf("It is special Character");
+    }
+    return 0;
+}
+
+***************************************************************************************
+/*5. Accept character from user and
+ display its ASCII value in decimal,
+ octal and hexadecimal format.
+Input :   A
+Output :
+Decimal   65
+Octal   0101
+Hexadecimal  0X41*/
+#include<stdio.h>
+void Display(int cValue)
+{
+    printf("decimal %d\n",cValue);
+    printf("Octal %o\n",cValue);
+    printf("Hexadecimal %X\n",cValue);
+}
+int main()
+{
+    char cValue='\0';
+    printf("Enter the character:");
+    scanf("%c",&cValue);
+    Display(cValue);
+    return 0;
+}
+
+****************************************************************************

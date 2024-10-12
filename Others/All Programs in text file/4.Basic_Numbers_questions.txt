@@ -1,0 +1,113 @@
+///Digit operations
+#include<stdio.h>
+int list_main()
+{
+    int choice=0;
+    printf("\n\n\n\t\tDigit operations\n");
+    printf("\t*******************************\n");
+    printf("\t1.check even and odd.\n");
+    printf("\t2.perfect or not.\n");
+    printf("\t3.Prime or not.\n");
+    printf("\t6.Sum N natural number.\n");
+    printf("\t4.factorial.\n");
+    printf("\t5.Leap year or not.\n");
+    printf("\t6.Armstrong or not.\n");
+    printf("\t7.Fibonacci series.\n");
+    printf("\t8.friendly or not.\n");
+    printf("\t9.Harshad number or not.\n");
+    printf("\t10.Abundant number or not.\n");
+    printf("\t11.Power of number.\n");
+    printf("\t12.Number is Positive or Negative.\n");
+    printf("\t13.swap two numbers with third variable.\n");
+    printf("\t14.swap two numbers without third variable.\n");
+    printf("\t15.LCM of two numbers.\n");
+    printf("\t15.GCD of two numbers.\n");
+    printf("\t15.greater than three numbers.\n");
+    printf("\t6.Strong number or not.\n");
+    printf("\t6.Palindrome or not.\n");
+    printf("\t6.Automorphic number or not.\n");
+    printf("\t6.Add two fraction.\n");
+    printf("\t0.Exit:\n");
+    printf("\t********************************\n\n");
+    printf("\tEnter your choice:");
+    scanf("%d",&choice);
+    return(choice);
+}
+int main()
+{
+   while(1)
+   {
+       switch(list_main())
+        {
+              case 1:
+                  ChkEvenOdd();
+                break;
+              case 2:
+                  ChkPerfect();
+                break;
+              case 3:
+                  PrimeOrNot();
+                break;
+         /*     case 4:
+                  DispSmall();
+                break;
+              case 5:
+                  SortDigit();
+                break;
+              case 6:
+                  ReplaceDigit();
+                break;
+              case 7:
+                  ReverseDigit();
+                break;
+              case 8:
+                DisplaySecMax();*/
+              case 0:
+                  printf("\n\tThanks\n");
+                exit(0);
+              default:
+                printf("\n\tPlzz.. enter the valid choice\n\n");
+        }
+    }
+}
+void ChkEvenOdd()
+{
+    int iNo=0;
+    printf("Enter the number:");
+    scanf("%d",&iNo);
+
+    if(iNo%2==0)
+    {
+        printf("%d is even",iNo);
+    }
+    else
+    {
+        printf("%d is odd",iNo);
+    }
+}
+void ChkPerfect()
+{
+    int iNo=0,i=0,iAdd=0;
+    printf("Enter the number:");
+    scanf("%d",&iNo);
+
+    for(i=1;i<iNo;i++)
+    {
+        if(iNo%i==0)
+        {
+            iAdd=iAdd+i;
+        }
+    }
+    if(iAdd==iNo)
+    {
+        printf("%d is a perfect number",iNo);
+    }
+    else
+    {
+        printf("%d is not perfect number",iNo);
+    }
+}
+void PrimeOrNot()
+{
+
+}

@@ -1,0 +1,51 @@
+how to create new branch in github command i want to create two branch 
+1.web-portal-dev
+2.web-portal-UI-UX
+Now default branch is master
+
+----------------------------------------------
+Steps:
+1.Clone the repository:
+git clone <repository_url>
+cd <repository_directory>
+
+2.Check out the default branch (master in your case):
+git checkout master
+
+3.Create the first branch (web-portal-dev):
+git branch web-portal-dev
+
+4.Switch to the new branch:
+git checkout web-portal-dev
+
+5.Make any necessary changes, add files, etc., and commit them:
+git add .
+git commit -m "Add changes for web-portal-dev"
+
+6.Push the branch to the remote repository:
+git push origin web-portal-dev
+
+-----------------------------------------
+7.Create the second branch (web-portal-UI-UX):
+git branch web-portal-UI-UX
+
+8.Switch to the new branch:
+git checkout web-portal-UI-UX
+
+9.Make any necessary changes, add files, etc., and commit them:
+git add .
+git commit -m "Add changes for web-portal-UI-UX"
+
+10.Push the branch to the remote repository:
+git push origin web-portal-UI-UX
+
+
+*******************************************************************************************
+
+
+git checkout master
+git pull origin master
+git merge web-portal-dev
+git add .
+git commit -m "Merge web-portal-dev into master"
+git push origin master

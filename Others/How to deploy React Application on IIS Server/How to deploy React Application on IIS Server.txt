@@ -1,0 +1,8 @@
+How to deploy React Application on IIS Server
+0.Go to your project - npm run build ->It create build folder in your project
+1.Go to control panel ->Programs and Features->Turn windows and feature trun on or off
+->Checked information services->ok
+2.Create one folder (deplyement) ->create inside other one folder (Project name)->
+paste your project build folder here(all files).
+3.Go to IIS -> Sites ->Click Right button ->add website ->add site name->physical path(deployemets folder->project name)->assign any IP address ->ok
+4. Browse website

@@ -1,0 +1,505 @@
+///String operations
+#include<stdio.h>
+int list_main()
+{
+    int choice=0;
+    printf("\n\n\n\t\tString\n");
+    printf("\t*******************************\n");
+    printf("\t1.Count capital letters.\n");
+    printf("\t2.Count Small letters.\n");
+    printf("\t3.Check in the vowel or not.\n");
+    printf("\t4.Display reverse order.\n");
+    printf("\t5.Convert all string in lower case.\n");
+    printf("\t6.Convert all string in Upper case.\n");
+    printf("\t7.Toggle case.\n");
+    printf("\t8.Display only digits.\n");
+    printf("\t9.Count number of white spaces.\n");
+    printf("\t10.accept one character.Check character is present in string or not.\n");
+    printf("\t11.accept one character.Return index of first occurrence of that character.\n");
+    printf("\t12.accept one character.Return index of Last occurrence of that character.\n");
+    printf("\t13.copy the contents of that string into another string.\n");
+    printf("\t14.Concat string into another string.\n");
+    printf("\t15.Two strings are check equal or not.\n");
+    printf("\t16.string is palindrome or not.\n");
+    printf("\t17.Words Count.\n");
+    printf("\t18.accept string from user and return length of largest word.\n");
+    printf("\t0.Exit:\n");
+    printf("\t********************************\n\n");
+    printf("\tEnter your choice:");
+    scanf("%d",&choice);
+    return(choice);
+}
+int main()
+{
+   while(1)
+   {
+       switch(list_main())
+        {
+              case 1:
+                 CountCapital();
+                break;
+              case 2:
+                  CountSmall();
+                break;
+              case 3:
+                  ChkVowel();
+                break;
+              case 4:
+                  Reverse();
+                break;
+              case 5:
+                  ConvertStrLowerCase();
+                break;
+              case 6:
+                  ConvertStrUpperCase();
+                break;
+              case 7:
+                  ToggalCase();
+                break;
+              case 8:
+                  DisplayOnlyDigit();
+                break;
+              case 9:
+                  CountWhiteSpace();
+                break;
+              case 10:
+                  CheckCharPresent();
+                break;
+              case 11:
+                  ReturnIndexFirOcc();
+                break;
+              case 12:
+                  ReturnIndexLastOcc();
+                break;
+              case 13:
+                  CopyStrToAnotherStr();
+                break;
+              case 14:
+                  ConcatStr();
+                break;
+              case 15:
+                  ChkTwoStrEqual();
+                break;
+              case 16:
+                  ChkPalindrome();
+                break;
+              case 17:
+                  CountWordStr();
+                break;
+              case 18:
+                  LengthLargestWord();
+                break;
+              case 0:
+                  printf("\n\tThanks\n");
+                exit(0);
+              default:
+                printf("\n\tPlzz.. enter the valid choice\n\n");
+        }
+    }
+}
+void CountCapital()
+{
+    int iCount=0,i=0;
+    char arr[100];
+    printf("Enter the string:");
+    scanf(" %[^'\n']s",&arr);
+    while(arr[i]!='\0')
+    {
+        if(arr[i]>='A'&&arr[i]<='Z')
+        {
+            iCount++;
+        }
+        i++;
+    }
+    printf("\n your capital letter count is %d\n",iCount);
+}
+void CountSmall()
+{
+    int iCount=0,i=0;
+    char arr[100];
+    printf("Enter the string:");
+    scanf(" %[^'\n']s",&arr);
+    while(arr[i]!='\0')
+    {
+        if(arr[i]>='a'&&arr[i]<='z')
+        {
+            iCount++;
+        }
+        i++;
+    }
+    printf("\n your small letter count is %d\n",iCount);
+}
+void ChkVowel()
+{
+    char arr[100];
+    int i=0,iCount=0;
+    printf("Enter the string:");
+    scanf(" %[^'\n']s",&arr);
+    while(arr[i]!='\0')
+    {
+        if(arr[i]=='A' ||arr[i]=='E' ||arr[i]=='I' ||arr[i]=='O' ||arr[i]=='U'||arr[i]=='a' ||arr[i]=='e'  || arr[i]=='i'  || arr[i]=='o'  || arr[i]=='u')
+        {
+            iCount++;
+        }
+        i++;
+    }
+    if(iCount>0)
+    {
+        printf("\tContains Vowels\n");
+    }
+    else
+    {
+        printf("\tContains not Vowels\n");
+    }
+}
+void Reverse()
+{
+   int iEnd=0,iStart=0;
+   char iTemp=0;
+   char arr[100];
+   printf("Enter the string:");
+   scanf(" %[^'\n']s",&arr);
+   while(arr[iEnd]!='\0')
+   {
+       iEnd++;
+   }
+   iEnd--;
+   while(iStart<iEnd)
+   {
+       iTemp=arr[iStart];
+       arr[iStart]=arr[iEnd];
+       arr[iEnd]=iTemp;
+       iStart++;
+       iEnd--;
+   }
+   printf("\nyour reverse string is:\n %s",arr);
+}
+void ConvertStrLowerCase()
+{
+    char iChar;
+    int i=0;
+    char arr[100];
+    printf("Enter the string:");
+    scanf(" %[^'\n']s",&arr);
+    while(arr[i]!='\0')
+    {
+        iChar=arr[i];
+        if(iChar>='A'&&iChar<='Z')
+        {
+            printf("%c",iChar+32);
+        }
+        else
+        {
+            printf("%c",iChar);
+        }
+        i++;
+    }
+}
+void ConvertStrUpperCase()
+{
+    char iChar;
+    int i=0;
+    char arr[100];
+    printf("Enter the string:");
+    scanf(" %[^'\n']s",&arr);
+    while(arr[i]!='\0')
+    {
+        iChar=arr[i];
+        if(iChar>='a'&&iChar<='z')
+        {
+            printf("%c",iChar-32);
+        }
+        else
+        {
+            printf("%c",iChar);
+        }
+        i++;
+    }
+}
+void ToggalCase()
+{
+    char iChar;
+    int i=0;
+    char arr[100];
+    printf("Enter the string:");
+    scanf(" %[^'\n']s",&arr);
+    while(arr[i]!='\0')
+    {
+        iChar=arr[i];
+        if(iChar>='a'&&iChar<='z')
+        {
+            printf("%c",iChar-32);
+        }
+        else if(iChar>='A'&&iChar<='Z')
+        {
+            printf("%c",iChar+32);
+        }
+        else
+        {
+            printf("%c",iChar);
+        }
+        i++;
+    }
+}
+void DisplayOnlyDigit()
+{
+    char iChar;
+    int i=0;
+    char arr[100];
+    printf("Enter the string:");
+    scanf(" %[^'\n']s",&arr);
+    while(arr[i]!='\0')
+    {
+        iChar=arr[i];
+        if(iChar>='1'&&iChar<='9')
+        {
+            printf("%c",iChar);
+        }
+        i++;
+    }
+}
+void CountWhiteSpace()
+{
+    int iCount=0;
+    char iChar;
+    int i=0;
+    char arr[100];
+    printf("Enter the string:");
+    scanf(" %[^'\n']s",&arr);
+    while(arr[i]!='\0')
+    {
+        iChar=arr[i];
+        if(iChar==' ')
+        {
+            iCount++;
+        }
+        i++;
+    }
+    printf("Your white space count is:%d",iCount);
+}
+void CheckCharPresent()
+{
+    int i=0,iCount=0;
+    char cValue;
+    char arr[100];
+    char cChar;
+    printf("Enter the string:");
+    scanf(" %[^'\n']s",&arr);
+    printf("\nEnter the character:");
+    scanf(" %c",&cChar);
+    while(arr[i]!='\0')
+    {
+        cValue=arr[i];
+        if(cValue==cChar)
+        {
+            iCount++;
+            break;
+        }
+        i++;
+    }
+    if(iCount>0)
+    {
+        printf("Character found");
+    }
+    else
+    {
+        printf("Character not found");
+    }
+}
+void ReturnIndexFirOcc()
+{
+    int i=0,iAns=0;
+    char cValue;
+    char arr[100];
+    char cChar;
+    printf("Enter the string:");
+    scanf(" %[^'\n']s",&arr);
+    printf("\nEnter the character:");
+    scanf(" %c",&cChar);
+    while(arr[i]!='\0')
+    {
+        cValue=arr[i];
+        if(cValue==cChar)
+        {
+           iAns=i;
+           break;
+        }
+        i++;
+    }
+    printf("Your first occurence index is %d",iAns);
+}
+void ReturnIndexLastOcc()
+{
+    int i=0;
+    char cValue,iLast;
+    char arr[100];
+    char cChar;
+    printf("Enter the string:");
+    scanf(" %[^'\n']s",&arr);
+    printf("\nEnter the character:");
+    scanf(" %c",&cChar);
+    while(arr[i]!='\0')
+    {
+        cValue=arr[i];
+        if(cValue==cChar)
+        {
+           iLast=i;
+        }
+        i++;
+    }
+    printf("your last occurence index is:%d",iLast);
+}
+void CopyStrToAnotherStr()
+{
+    int i=0;
+    char brr[20];
+    char arr[100];
+    printf("Enter the string:");
+    scanf(" %[^'\n']s",&arr);
+    while(arr[i]!='\0')
+    {
+        brr[i]=arr[i];
+        i++;
+    }
+    brr[i]='\0';
+    printf("Your String is copy to another string:%s",brr);
+}
+void ConcatStr()
+{
+    char i=0,j=0;
+    char arr[20];
+    char brr[20];
+    printf("Enter the 1st string:");
+    scanf(" %[^'\n']s",&arr);
+    printf("Enter the 2nd string:");
+    scanf(" %[^'\n']s",&brr);
+    while(arr[i]!='\0')
+    {
+        i++;
+    }
+    while(brr[j]!='\0')
+    {
+        arr[i]=brr[j];
+        i++;
+        j++;
+    }
+    arr[i]='\0';
+    printf("Your strings are concated %s",arr);
+}
+void ChkTwoStrEqual()
+{
+    int i=0,iCount=0;
+    char arr[20];
+    char brr[20];
+    printf("Enter the 1st string:");
+    scanf(" %[^'\n']s",&arr);
+    printf("Enter the 2nd string:");
+    scanf(" %[^'\n']s",&brr);
+    while(arr[i]!='\0')
+    {
+        if(arr[i]==brr[i])
+         {
+             iCount++;
+         }
+        i++;
+    }
+
+    if(iCount==i)
+     {
+         printf("String are same");
+     }
+     else
+     {
+         printf("String Not Same");
+     }
+}
+void ChkPalindrome()
+{
+   int iEnd=0,iStart=0;
+   int iCount=0;
+   char arr[20];
+   printf("Enter the string:");
+   scanf(" %[^'\n']s",&arr);
+   while(arr[iEnd]!='\0')
+   {
+       iEnd++;
+   }
+   iEnd--;
+   while(iStart<iEnd)
+   {
+       if(arr[iStart]==arr[iEnd])
+       {
+           iCount++;
+       }
+
+       iStart++;
+       iEnd--;
+   }
+   if(iStart==iCount)
+   {
+       printf("It is palindrome");
+   }
+   else
+   {
+       printf("It is not palindrome");
+   }
+}
+void CountWordStr()
+{
+    int iCount=0,i=0;
+    char str[100];
+    printf("Enter the string:");
+    scanf(" %[^'\n']s",&str);
+    while(str[i]!= '\0')
+    {
+        if(str[i] == ' ')
+        {
+            while((str[i] == ' ') && (str[i]!= '\0'))
+            {
+                i++;
+            }
+        }
+       else
+        {
+            while(str[i]>='A'&&str[i]<='Z'||str[i]>='a'&&str[i]<='z')
+             {
+                 i++;
+             }
+             iCount++;
+        }
+    }
+     printf("Words count is: %d",iCount);
+}
+void LengthLargestWord()
+{
+    int iMax = 0,i=0;
+    int iCount=0;
+    char str[100];
+    printf("Enter the string:");
+    scanf(" %[^'\n']s",str);
+
+    while(str[i]!= '\0')
+    {
+        if(str[i] == ' ')
+        {
+            while((str[i]== ' ') && (str[i]!= '\0'))
+            {
+                i++;
+            }
+        }
+       else
+        {
+            while(str[i]>='A'&&str[i]<='Z'||str[i]>='a'&&str[i]<='z')
+             {
+                 iCount++;
+                 i++;
+             }
+        }
+        if(iMax<iCount)
+        {
+            iMax=iCount;
+        }
+        iCount=0;
+    }
+     printf("Your largest word is length is:%d",iMax);
+}
