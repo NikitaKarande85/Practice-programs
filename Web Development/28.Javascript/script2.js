@@ -108,7 +108,7 @@ console.log("binaDataTypeKaVariable",binaDataTypeKaVariable)
 parent();
 function parent(){
     console.log("Every curly brakets are block scopes")
-    const a=200;
+    const a=200; //its saved in clouser
     function child(){
         var b=9000;
         function smallchild(){

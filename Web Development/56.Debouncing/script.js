@@ -3,6 +3,7 @@ function debounce(func, delay) {
     let timer;
     return function (...args) {
       const context = this;
+      console.log("this",this)//this sathi apply use kel jat
       clearTimeout(timer); //imp
       timer = setTimeout(() => func.apply(context, args), delay);
     };

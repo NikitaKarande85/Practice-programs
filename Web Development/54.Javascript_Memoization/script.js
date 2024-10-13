@@ -17,11 +17,12 @@
 //problem - when we calling three times of function and all function execute everytime and return same value.Its time consuming.
 
 
+// --------------------------------------------------------------------
 // -Solution
 // -so we are creating cache for save data.
 
 function getYourMemoizedFunction() {
-    const cache = {} //Its save in clouser
+    const cache = {} //Its save in clouser(If we are using parent variable in child then its all variables save in clouser)
     function doHeavyCalculation(x) {
         // const cache = {} //got refreshing problem
         if(cache[x]) return cache[x]
