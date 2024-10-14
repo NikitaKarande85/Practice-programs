@@ -59,6 +59,10 @@
     align-items: center;
     width: 0;
     overflow: hidden;
+    transition: width 0.2s ease-in-out;
+}
+.progress-val span{
+    margin-left: 10px;
 }
 
 .errorMsg {
@@ -164,5 +168,9 @@
 
     .progress-Bar {
         height: 20px;
+    }
+    .check-icon{
+        height: 12px;
+        width: 12px;
     }
 }

@@ -47,7 +47,9 @@
 /* ------------------------sticky-------------------------------- */
 /* hold same position */
 .positionSticky{
-    background-color: deeppink;
+    background-color: deeppink; 
+
+    /* sticky krnyasathi top pn lihave lagte */
     position: sticky;
     top:0px; 
 }
