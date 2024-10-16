@@ -3,6 +3,7 @@ Chrome->
 2.Measure-it
 3.VisBug
 4.React Developer Tools
+5.JSON Viewer Pro
 
 ------------------------------------------
 VS code->
