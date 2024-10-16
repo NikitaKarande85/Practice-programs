@@ -2,12 +2,15 @@ Chrome->
 1.ColorPick Eyedropper 
 2.Measure-it
 3.VisBug
+4.React Developer Tools
 
 ------------------------------------------
 VS code->
-1.Thunder Client(Postman)2.JavaScript (ES6) code snippets
+1.Thunder Client(Postman)
+2.JavaScript (ES6) code snippets
 3.Live Server
 4.Auto Rename Tag
+5.GitLens — Git supercharged(git)
 
 ------------------------------------------
 Game->
