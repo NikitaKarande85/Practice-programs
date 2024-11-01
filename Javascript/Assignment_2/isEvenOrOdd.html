@@ -1,0 +1,29 @@
+<!-- 5. Accept number from user and check whether number is even or 
+odd.   -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Odd</title>
+    <script>
+        function HandleSubmit(){
+            const yourNum=document.getElementById('YourNum').value
+            const output=document.querySelector("#output");
+            
+            if(yourNum%2==0){
+                output.innerText="your value is even"
+                console.log("your value is even");
+            }else{
+                output.innerText="your value is odd"
+                console.log("Your value is odd")
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="YourNum">
+    <button onclick="HandleSubmit()">Submit</button>
+    <h1 id="output">Your response</h1>
+</body>
+</html>

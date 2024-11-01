@@ -1,0 +1,37 @@
+<!-- 3. Accept on number from user if number is less than 10 then print  -->
+<!-- “Hello” otherwise print “Demo”.   -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function CheckNumber(){
+            let inputValue = document.getElementById("numberInput").value;
+            const output=document.querySelector("#output")
+
+            if(isNaN(inputValue)){
+                alert("Please enter valid value")
+                return -1;
+            }
+            if(inputValue<10){
+                output.innerText="Hello"
+                console.log("Hello")
+            }else{
+                output.innerText="Demo"
+                console.log("Demo")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Check Number</h1>
+    <input type="text" id="numberInput" placeholder="Enter the number">
+    <button onclick="CheckNumber()">Submit</button>
+    <h1 id="output">Output</h1>
+</body>
+
+</html>
