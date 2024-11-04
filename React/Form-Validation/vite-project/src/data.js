@@ -1,0 +1,20 @@
+export default[
+    {
+        id:crypto.randomUUID(),
+        title:"title1",
+        category:2000,
+        amount:50
+    },
+    {
+        id:crypto.randomUUID(),
+        title:"title2",
+        category:3000,
+        amount:40
+    },
+    {
+        id:crypto.randomUUID(),
+        title:"title3",
+        category:4000,
+        amount:90
+    }
+]
