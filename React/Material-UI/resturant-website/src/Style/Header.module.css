@@ -1,0 +1,17 @@
+.MenuCss{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MenuCss .Menuu{
+    margin: 0px 20px;
+}
+
+.homeCSS{
+    background-color: rgb(218, 145, 145);
+    height:400px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
