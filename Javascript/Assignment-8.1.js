@@ -5,6 +5,15 @@
 // Output : Medium 
 
 function print(no) {
+    if(no<50){
+        console.log("Small")
+    }else if(no>=50 && no<=100){
+        console.log("medium")
+    }else if(no>100){
+        console.log('large')
+    }else{
+        console.log("other")
+    }
 }
 
-print(4)
+print(130)
