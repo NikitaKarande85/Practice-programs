@@ -1,0 +1,15 @@
+
+1.By default configration node module
+   - npm init -y (Created by default package.json file)
+
+2.We can install any package
+   https://www.npmjs.com/
+   
+   - npm i text-upper-case
+   (Its create node_modules folder and added upper case package 
+   and dependency in that)
+
+   -Added package .json in depedencies of upper case
+
+
+
