@@ -5,7 +5,7 @@ const app=express();
 
 app.set('view engine','ejs')
 app.get('/profile/:name',function(req,res){
-    //views/profile - create folter
+    //views/profile - create folter and create file ejs
     res.render('Profile',{name:req.params.name})
 })
 
