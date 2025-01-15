@@ -1,0 +1,185 @@
+.main {
+  font-family: "Josefin Sans";
+  box-sizing: 0;
+}
+
+.logo {
+  font-size: 43.69px;
+  font-weight: 400;
+  line-height: 43.69px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-top: 36.94px;
+  margin-left: 49px;
+  font-family: "Josefin Sans";
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  Width: 653px;
+  height: 45px;
+  max-width: 500px;
+  margin: -44p auto;
+  padding: 5px;
+  border-width: 0px 2px 2px 0px;
+  border-style: solid;
+  border-color: #E1C9F7;
+  border-radius: 25px;
+  box-shadow: 0 0 10px #E1C9F7E0;
+  background: #fff;
+  margin-top: 33px;
+  left: 348px;
+}
+
+.search-container input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  background: transparent;
+}
+
+.search-container button {
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.search-container button img {
+  width: 20px;
+  height: 20px;
+}
+
+.content {
+  font-family: "Josefin Sans";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-right: 44px;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome {
+  font-family: Jockey One;
+  font-size: 39.2px;
+  font-weight: 400;
+  line-height: 54.8px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  width: 247px;
+  height: 55px;
+  /* margin-top: 117px;  I set this beacuse its not show properly */
+  margin-left: 49px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.Scheduled-contain {
+  width: 831px;
+  height: 503px;
+  top: 216px;
+  left: 251px;
+  gap: 0px;
+  border-radius: 26px;
+  opacity: 0px;
+  box-shadow: 0 0 10px #E1C9F7E0;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.line {
+  width: 406px;
+  height: 0px;
+  top: 237px;
+  left: 486px;
+  gap: 0px;
+  border: 3px 0px 0px 0px;
+  opacity: 0px;
+  angle: -90 deg;
+  color: rgba(247, 202, 201, 1);
+  background-color: rgba(247, 202, 201, 1);
+}
+
+.content-schedule {
+  display: flex;
+  justify-content: space-around;
+  padding: 25px;
+}
+
+.logos {
+  /* margin-top: 47px; */
+}
+
+.meetingiconbackground {
+  width: 139px;
+  height: 150.91px;
+  top: 407px;
+  left: 317px;
+  gap: 0px;
+  border-radius: 20.65px;
+  opacity: 0px;
+  box-shadow: 0 0 10px #E1C9F7E0;
+  display: grid;
+  place-items: center;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.calender {
+  margin-left: 30px;
+}
+
+.day {
+  color: rgba(165, 143, 185, 1);
+  font-family: Josefin Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.date{
+  font-family: Josefin Sans;
+font-size: 20px;
+font-weight: 400;
+line-height: 20px;
+text-align: right;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+.date-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.lines{
+  width: 4px;
+height: 0px;
+}
+
+.horizontal{
+margin-top: 10px;
+}
