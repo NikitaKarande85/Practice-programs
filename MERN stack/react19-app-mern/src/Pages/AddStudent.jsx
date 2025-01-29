@@ -1,7 +1,7 @@
 import { Grid2, ListItem, TextField, Typography } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import Button from '@mui/material/Button';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function AddStudent() {
     const [firstName, setfirstName] = useState("");
