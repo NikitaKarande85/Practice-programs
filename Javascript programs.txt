@@ -1,0 +1,71 @@
+1.Write a Program to reverse a string in JavaScript.(predefined Function)
+
+Answer-->
+function reverseString(str) 
+{
+  return str.split("").reverse().join("");
+}
+console.log(reverseString("GeeksForGeeks"));
+
+--------------------------------------------------------------------------
+2.Write a Program to reverse a string in JavaScript.(without predefined Function)
+
+Answer-->
+let str="Nikita";
+let res="";
+for(let i=str.length-1;i>=0;i--){
+    res+=str[i]
+}
+console.log(res)
+
+-------------------------------------------------------------------------
+// Write a Program to check whether a string is a palindrome string.(predefined Function)
+
+let str="nikiikin";
+
+
+const res=str.split('').reverse().join('')
+
+if(res===str){
+    console.log("It is palindrome")
+}else{
+    console.log("It is not palindrome")
+}
+
+------------------------------------------------------------------------
+// Write a Program to check whether a string is a palindrome string.(without predefined Function)
+
+
+let str="nikiikin";
+
+let reverse=""
+
+for(let i=str.length-1;i>=0;i--){
+    reverse+=str[i]
+}
+
+console.log("reverse",reverse)
+
+if(str===reverse){
+    console.log("It is palindrome")
+}else{
+    console.log("It is not palindrome")
+}
+
+----------------------------------------------------------------------------------
+//  Find the largest number in an array in JavaScript. (without predefined Function)
+
+let arr=[56,34,827,23,98,123,44]
+
+var largest=0;
+ largest=arr[0];
+for(let i=0; i<arr.length;i++){
+  if(arr[i]>largest){
+      largest=arr[i];
+  }
+}
+
+console.log(largest)
+
+-------------------------------------------------------------------------------------
+//  Find the largest number in an array in JavaScript. (with predefined Function)
